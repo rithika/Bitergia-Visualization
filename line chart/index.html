@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<style>
+
+body {
+  font: 10px sans-serif;
+}
+
+.axis path,
+.axis line {
+  fill: none;
+  stroke: #000;
+  shape-rendering: crispEdges;
+}
+
+.x.axis path {
+  display: none;
+}
+
+.line {
+  fill: none;
+  stroke: steelblue;
+  stroke-width: 1.5px;
+}
+
+.d3-tip {
+  line-height: 1;
+  font-weight: bold;
+  padding: 12px;
+  background: rgba(0, 0, 0, 0.8);
+  color: #fff;
+  border-radius: 2px;
+}
+
+/* Creates a small triangle extender for the tooltip */
+.d3-tip:after {
+  box-sizing: border-box;
+  display: inline;
+  font-size: 10px;
+  width: 100%;
+  line-height: 1;
+  color: rgba(0, 0, 0, 0.8);
+  content: "\25BC";
+  position: absolute;
+  text-align: center;
+}
+
+/* Style northward tooltips differently */
+.d3-tip.n:after {
+  margin: -1px 0 0 0;
+  top: 100%;
+  left: 0;
+}
+</style>
+<body>
+  <center><h2>Line Chart for timezone of message origins </h2></center>
+<script src="http://d3js.org/d3.v3.js"></script>
+<script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+<script>
+
+var margin = {top: 20, right: 80, bottom: 30, left: 50},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var x = d3.scale.ordinal()
+  .rangeRoundBands([0,width],.1);
+
+var y = d3.scale.linear()
+    .range([height, 0]);
+
+var color = d3.scale.category10();
+
+var xAxis = d3.svg.axis()
+    .scale(x)
+    .orient("bottom");
+
+var yAxis = d3.svg.axis()
+    .scale(y)
+    .orient("left");
+
+var area = d3.svg.area()
+.x(function(d) { return x(d.date); })
+.y(function(d) { return y(d.messages); })
+
+var line = d3.svg.line()
+    .interpolate("basis")
+    .x(function(d) { return x(d.date); })
+    .y(function(d) { return y(d.messages); });
+
+var tip = d3.tip()
+    .attr('class','d3-tip')
+    .offset([-10,0])
+    .html(function(d){console.log("here");
+      return "<strong>Messages:</strong> <span style = 'color:red'>" + d.messages + "</span>";
+    })
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right)
+    .attr("height", height + margin.top + margin.bottom)
+    .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("mydata.json", function(data) {
+  color.domain(d3.keys(data[0]).filter(function(key) { return key !== "date"; }));
+
+  var years = color.domain().map(function(name) {
+    return {
+      name: name,
+      values: data.map(function(d) {
+        return {date: d.date, messages: +d[name]};
+      })
+    };
+  });
+
+ x.domain(data.map(function(d){return d.date;}));
+
+  y.domain([
+    d3.min(years, function(c) { return d3.min(c.values, function(v) { return v.messages; }); }),
+    d3.max(years, function(c) { return d3.max(c.values, function(v) { return v.messages; }); })
+  ]);
+
+  svg.append("g")
+      .attr("class", "x axis")
+      .attr("transform", "translate(0," + height + ")")
+      .call(xAxis);
+
+  svg.append("g")
+      .attr("class", "y axis")
+      .call(yAxis)
+      .append("text")
+      .attr("transform", "rotate(-90)")
+      .attr("y", 6)
+      .attr("dy", ".71em")
+      .style("text-anchor", "end")
+      .text(" Messages");
+
+  var city = svg.selectAll(".city")
+      .data(years)
+      .enter().append("g")
+      .attr("class", "city");
+
+  city.append("path")
+      .attr("class", "line");
+     /* city.append("path")
+      .datum(data)
+      .attr("class","area")
+      .attr("d",area);*/
+
+  d3.transition().selectAll(".line")
+      .delay(function(d,i){return i * 2000; })
+      .ease("linear")
+      .attr("d", function(d){return area(d.values); })
+      .style("stroke", function(d) {return color(d.name); });
+      //.on('mouseover', tip.show)
+      //.on('mouseout', tip.hide);
+      
+
+  city.append("text")
+      .datum(function(d) { return {name: d.name, value: d.values[d.values.length - 1]}; })
+      .attr("transform", function(d) { return "translate(" + x(d.value.date) + "," + y(d.value.messages) + ")"; })
+      .attr("x", 3)
+      .attr("dy", ".35em")
+      .text(function(d) { return d.name; });
+      
+});
+
+</script>

@@ -1,0 +1,131 @@
+<html>
+<head>
+	<style type="text/css">
+		rect.bordered{
+			stroke : #E6E6E6;
+			stroke-width: 2px;
+		}
+		text.mono{
+			font-size : 9pt;
+			font-family: Consolas, Courier;
+			fill : #aaa;
+		}
+	</style>
+ <script src="http://d3js.org/d3.v3.js"></script>
+</head>
+<body>
+	<center>
+	<h2> Heatmap for timezone of message origins</h2>
+	<div id = "chart"></div>
+	<script type="text/javascript">
+	var margin = {top: 50, right: 0, bottom: 0, left: 70 },
+	width = 960,
+	height = 430,
+	gridSize = Math.floor(width/24),
+	legendElement = gridSize + 10,
+	zones = ["GMT-10","GMT-5","GMT","GMT+5","GMT+10"],
+	colors = ["#ffffd9","#c7e9b4","#41b6c4","#225ea8","#081d58"];
+	buckets = colors.length;
+	
+
+	d3.json("convertcsv.json",function(data) {
+	dataset = data;
+
+	var dataValue = [];
+
+	data.forEach(function(item){
+	
+	var temp = []
+
+	item["points"].forEach(function(point){
+		var temp = [point["year"], item["zone"], point["value"]]; 
+		dataValue.push(temp);
+	})
+
+	});
+
+	var colorscale = d3.scale.quantile()
+	.domain([0, d3.max(dataValue, function(d){
+		return d[2];
+	})])
+	.range(colors);
+		
+
+var svg = d3.select("#chart").append("svg")
+	.attr("width",width+margin.left+margin.right)
+	.attr("height",height)
+	.append("g")
+	.attr("transform","translate(" + margin.left +","+margin.top+")");
+
+var yAxis = svg.selectAll(".yAxis")
+	.data(zones)
+	.enter().append("text")
+	.text(function(d) {return d;})
+	.attr("x",0)
+	.attr("y",function(d,i){ return i * gridSize; })
+	.style("text-anchor","end")
+	.attr("transform","translate(-6," + gridSize/1.5 + ")")
+	
+	xData = data[0]["points"]
+
+var xAxis = svg.selectAll(".xAxis")
+	.data(xData)
+	.enter().append("text")
+	.text(function(d) { return d.year; } )	
+	.attr("x", function(d,i) { return 10 + i*gridSize; })
+	.attr("y",0)
+	.style("text-anchor","middle")
+	.attr("transform","translate(" + gridSize/2 + ",-6)");
+
+var i = 0;
+var heatmap = svg.selectAll(".year")
+	.data(dataValue)
+	.enter().append("rect")
+	.attr("x",function(d, i) { 
+		//console.log(d[0]);
+		return ((d[0] - 2003) * gridSize/2) + 10;
+	})
+
+	.attr("y",function(d) {	
+		return (d[1] - 1) * gridSize;
+	})
+
+	.attr("rx",4)
+	.attr("ry",4)
+	.attr("class","year bordered")
+	.attr("width",gridSize)
+	.attr("height",gridSize)
+	.style("fill",colors[0]);
+
+	heatmap.transition().duration(1000)
+	.style("fill", function(d){
+		console.log(d[2]);
+		return colorscale(d[2]);
+	});
+
+	heatmap.append("title").text(function(d){return d[2];});
+
+var legend = svg.selectAll(".legend")
+	.data([0].concat(colorscale.quantiles()), function(d) { console.log(d);return d; })
+	.enter().append("g")
+	.attr("class","legend");
+
+	legend.append("rect")
+	.attr("x",function(d,i) { return (legendElement * i) + 10; })
+	.attr("y",240)
+	.attr("width",legendElement)
+	.attr("height",gridSize/2)
+	.style("fill",function(d,i) { return colors[i]; });
+
+	legend.append("text")
+	.attr("class","mono")
+	.text(function(d) { return ">=" + Math.round(d); })
+	.attr("x",function(d,i) { return (legendElement*i) + 10; })
+	.attr("y", 240 + gridSize);
+
+});
+
+	</script>
+</center>
+</body>
+</html>

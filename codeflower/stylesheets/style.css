@@ -1,0 +1,60 @@
+body {
+  font-family: 'Rosario', sans-serif;
+}
+
+#visualization {
+  overflow: auto;
+}
+
+h1 {
+  font-size: 52px;
+  font-weight: 300;
+  letter-spacing: -2px;
+  line-height: 1em;
+  margin: 1em 0;
+}
+
+textarea {
+  width: 98%;
+  height: 200px;
+}
+
+.brand {
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #dc534b;
+  margin-top: 3px;
+  text-shadow: 0 1px 0 #fff;
+/*  font-family: 'Lobster', cursive;*/
+/*  font-size:30px;
+  font-size: 28px;
+  font-weight: 400;
+  color: #dc534b;
+  margin-top: 3px;
+  text-shadow: 0 1px 0 #fff;*/
+}
+.brand:hover {
+  color:#333;
+}
+.brand_first {
+  color:#333;
+  -o-transition:.5s;
+  -ms-transition:.5s;
+  -moz-transition:.5s;
+  -webkit-transition:.5s;
+  /* ...and now for the proper property */
+  transition:.5s;
+}
+.brand_first:hover {
+  color:#dc534b;
+}
+
+.experiment {
+  font-family: 'Averia Serif Libre', cursive;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: -2px;
+  color: #333;
+}

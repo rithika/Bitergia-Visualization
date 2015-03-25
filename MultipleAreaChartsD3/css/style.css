@@ -1,0 +1,125 @@
+body{
+	font-family: 'Lato', Arial, serif;
+	font-weight: 300;
+	font-size: 14px;
+	color: #888;
+	-webkit-font-smoothing: antialiased;
+}
+.container{
+	width: 100%;
+	position: relative;
+}
+.container > header{
+	margin: 10px;
+	padding: 20px 10px 10px 10px;
+	position: relative;
+	display: block;
+	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
+    text-align: center;
+}
+.container > header h1{
+	font-size: 30px;
+	line-height: 32px;
+	margin: 0;
+	position: relative;
+	font-weight: 300;
+	color: #666;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+}
+.container > header p{
+	margin: 0;
+	padding: 15px 0 5px 0;
+	color: #888;
+	text-shadow: 1px 1px 1px rgba(255,255,255,0.7);
+}
+.main{
+	width: 90%;
+	margin: 0 auto;
+	position: relative;
+}
+
+
+#chart-container {
+	width: 1000px; 
+	margin: 0 auto 50px auto;
+	background: rgba(255,255,255,0.5);
+	box-shadow: 1px 1px 4px rgba(0,0,0,0.2);
+	padding: 20px 30px;
+}
+
+#chart-container h2 {
+	color: #444;
+	margin: 0 0 10px;
+	font-weight: 300;
+	padding: 10px;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+	font-size: 24px;
+}
+
+svg {
+	font-family: 'Lato', Arial, serif;
+	font-size: 10px;
+	font-weight: 700;
+	text-shadow: 0 1px 1px rgba(255,255,255,0.8);
+}
+
+text.country-title {
+	font-size: 20px;
+}
+
+text.instructions {
+	font-size: 16px;
+}
+
+g.context g.brush rect.background {
+	fill: rgba(0,0,0,.1);
+}
+
+g.context g.axis path {
+	stroke-opacity: 0;
+}
+
+g.context g.axis line {
+	stroke-opacity: .1;
+}
+
+g.australia path.chart {
+	fill: rgba(127,201,127,0.5);
+}
+
+g.asia path.chart {
+	fill: rgba(127,201,174,0.5);
+}
+
+g.africa path.chart {
+	fill: rgba(127,183,201,0.5);
+}
+
+g.europe path.chart {
+	fill: rgba(127,130,201,0.5);
+}
+
+g.northamerica path.chart {
+	fill: rgba(255,0,0,0.5);
+}
+
+g.southamerica path.chart {
+	fill: rgba(192,192,192,0.5);
+}
+
+.axis path, .axis line {
+	fill: none;
+	stroke: #aaa;
+	shape-rendering: crispEdges;
+}
+
+.brush .extent {
+	stroke: #f09f8c;
+	fill-opacity: .125;
+	shape-rendering: crispEdges;
+}
+
+g.context rect.background{
+	fill: rgb(200,200,255);
+	visibility: visible !important;
+}​
