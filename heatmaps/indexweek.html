@@ -10,8 +10,29 @@
 			font-family: Consolas, Courier;
 			fill : #aaa;
 		}
+		text.mono:hover {
+        font-size: 12pt;
+        font-family: verdana;
+        fill: #aaa;
+        font-weight: bold;
+      }
+      .square {
+        opacity: 1.0;
+      }      
+      .square:hover {
+        opacity: 1.0;
+      }
+      .d3-tip {
+        font-family: Verdana;
+        background: rgba(0, 0, 0, 0.8);
+        padding: 8px;
+        color: #fff; 
+        z-index: 5070;
+      }
 	</style>
  <script src="http://d3js.org/d3.v3.js"></script>
+ <script src="http://labratrevenge.com/d3-tip/javascripts/d3.tip.v0.6.3.js"></script>
+ <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
 </head>
 <body>
 	<center>
@@ -57,6 +78,16 @@ var svg = d3.select("#chart").append("svg")
 	.append("g")
 	.attr("transform","translate(" + margin.left +","+margin.top+")");
 
+var tip = d3.tip()
+.attr('class','d3-tip')
+.style("visibility","visible")
+.offset([-20,0])
+.html(function(d){
+	//console.log(d.value);
+return "Value: <span style='color:red'>"+Math.round(d[2]);
+});
+tip(svg.append("g"));
+
 var yAxis = svg.selectAll(".yAxis")
 	.data(weeks)
 	.enter().append("text")
@@ -94,15 +125,16 @@ var heatmap = svg.selectAll(".time")
 	.attr("class","time bordered")
 	.attr("width",gridSize)
 	.attr("height",gridSize)
-	.style("fill",colors[0]);
+	.style("fill",colors[0])
+	.attr("class","square")
+	.on('mouseover', tip.show)
+    .on('mouseout', tip.hide);
 
 	heatmap.transition().duration(1000)
 	.style("fill", function(d){
 		console.log(d[2]);
 		return colorscale(d[2]);
 	});
-
-	heatmap.append("title").text(function(d){return d[2];});
 
 var legend = svg.selectAll(".legend")
 	.data([0].concat(colorscale.quantiles()), function(d) { console.log(d);return d; })
