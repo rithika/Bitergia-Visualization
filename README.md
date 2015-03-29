@@ -6,3 +6,6 @@ Technologies used
 1. D3 library 
 
 2. JSON data files
+
+3. Datamaps library
+
