@@ -51,7 +51,7 @@ function redraw() {
   svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
 }
 
-d3.json("timezonesnew.json", function(error, world) {
+d3.json("timezones-topo2.json", function(error, world) {
 console.log(world);
   var tzdata = topojson.feature(world, world.objects.timezones).features;
 
