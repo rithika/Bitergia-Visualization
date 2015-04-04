@@ -25,8 +25,11 @@ body {
 }
 </style>
 <body>
+<link rel="stylesheet" href="d3.slider.css" media="screen"/>
 <script src="http://d3js.org/d3.v3.min.js"></script>
-
+<script src="d3.slider.js"></script>
+<div>
+<div id = "chart">
 <script>
 var margin = {top: 20, right: 20, bottom: 30, left: 40},
     width = 960 - margin.left - margin.right,
@@ -69,7 +72,7 @@ d3.json("convertcsv.json", function(error, data) {
        d["Year"] = +d["Year"];
    // console.log(d);
   });
-
+  
   // don't want dots overlapping axis, so add in buffer to data domain
   xScale.domain([d3.min(data, xValue)-1, d3.max(data, xValue)+1]);
   yScale.domain([d3.min(data, yValue)-1, d3.max(data, yValue)+1]);
@@ -85,6 +88,10 @@ d3.json("convertcsv.json", function(error, data) {
       .attr("y", -6)
       .style("text-anchor", "end")
       .text("Numbers");
+
+//d3.select('#slider').call(d3.slider().axis(true).value([10,100]).on("slide",function(evt,value){
+ // d3.select('#slider')
+//}))
 
   // y-axis
   svg.append("g")
@@ -146,5 +153,15 @@ d3.json("convertcsv.json", function(error, data) {
 });
 
 </script>
+</div>
+<div id = "slider">
+  <script> 
+d3.select('#slider').call(d3.slider().axis(true).value([0,120]).on("slide", function(evt, value) {
+  d3.select('#slider3textmin').text(value[ 0 ]);
+  d3.select('#slider3textmax').text(value[ 1 ]);
+}))
+  </script>
+</div>
+</div>
 </body>
 </html>
