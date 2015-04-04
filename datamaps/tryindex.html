@@ -2,11 +2,11 @@
 <meta charset="utf-8">
 <title>Time Zone World Map</title>
 <style>
-path {
+#vis path {
   fill: none;
   stroke: #111;
 }
-div.tooltip {
+#vis tooltip {
   color: #222; 
   background: #fff; 
   padding: .5em; 
@@ -19,11 +19,18 @@ div.tooltip {
 </style>
 </head>
 <body>
-<script src="http://d3js.org/d3.v3.js"></script>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src='http://d3js.org/queue.v1.min.js'></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-
+<div id = "vis"> </div>
 <script>
-var width = 960,height = 500;
+var Viz = (function(d3){
+  queue()
+  .defer(d3.json,'timezones-topo2.json')
+  .defer(d3.json,'scm-timezone.json')
+  .await(createMap);
+
+var width = 1000,height = 600;
 
 var projection = d3.geo.mercator();
 
@@ -31,14 +38,15 @@ var color = d3.scale.category20();
 
 var path = d3.geo.path().projection(projection);
 
-var svg = d3.select("body").append("svg")
-    .attr("width", width)
-    .attr("height", height)
-    .call(d3.behavior.zoom()
-    .on("zoom", redraw))
-    .append("g");
+function createMap(error,world,timez) {
+  var svg = d3.select("body").append("svg")
+  .attr("width",width)
+  .attr("height",height)
+  .call(d3.behavior.zoom().on("zoom",redraw))
+  .append("g");
 
-var tooltip = d3.select('body').append("div").attr("class", "tooltip hidden");
+  var tooltip = d3.select("body").append("div")
+            .attr("class", "tooltip hidden");
 
 function redraw() {
   var s = d3.event.scale;
@@ -46,17 +54,19 @@ function redraw() {
 
   svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
 }
-
-d3.json("timezones-topo2.json", function(error, world) {
-console.log(world);
   var tzdata = topojson.feature(world, world.objects.timezones).features;
+
+  var msgdata = timez.commits;
+  console.log(msgdata[0]);
+  var timedata = timez.tz;
+  console.log(timedata);
 
   var tz = svg.selectAll(".tz").data(tzdata);
 
   tz.enter().insert("path")
       .attr("class", "tz")
       .attr("d", path)
-      .attr("title", function(d,i) { console.log(d);return d.properties.Name; })
+      .attr("title", function(d,i) { return d.properties.Name; })
       .style("fill", function(d, i) { return color(d.properties.Name.replace(/[A-Za-z ]/g,"")); });
 
 
@@ -70,9 +80,10 @@ console.log(world);
       })
       .on("mouseout",  function(d,i) {
         tooltip.classed("hidden", true)
-      }); 
+      });           
+}
 
-});
+})(d3);
 </script>
 </body>
 </html>
