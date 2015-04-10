@@ -2,6 +2,7 @@
 <meta charset="utf-8">
 <title>Time Zone World Map</title>
 <style>
+
 #vis path {
   fill: none;
   stroke: #111;
@@ -34,7 +35,7 @@ var width = 1000,height = 600;
 
 var projection = d3.geo.mercator();
 
-var color = d3.scale.category20();
+var color = ["#ffffd9","#c7e9b4","#41b6c4","#225ea8","#081d58"];
 
 var path = d3.geo.path().projection(projection);
 
@@ -55,19 +56,31 @@ function redraw() {
   svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
 }
   var tzdata = topojson.feature(world, world.objects.timezones).features;
-
   var msgdata = timez.commits;
-  console.log(msgdata[0]);
+  //console.log(msgdata[0]);
   var timedata = timez.tz;
-  console.log(timedata);
+  //console.log(timedata);
+
+  var colorscale = d3.scale.quantile()
+  .domain([0, d3.max(timez, msgdata)])
+  .range(color);
 
   var tz = svg.selectAll(".tz").data(tzdata);
 
   tz.enter().insert("path")
       .attr("class", "tz")
       .attr("d", path)
-      .attr("title", function(d,i) { return d.properties.Name; })
-      .style("fill", function(d, i) { return color(d.properties.Name.replace(/[A-Za-z ]/g,"")); });
+      .attr("title", function(d,i) { 
+        var string = d.properties.Name;
+        var array = string.split("\n");
+         console.log(array);
+         //console.log(typeof array);
+        return d.properties.Name; 
+       })
+      .style("fill", function(d, i) { return color[0]}); //(d.properties.Name.replace(/[A-Za-z ]/g,""));
+
+  tz.transition().duration(1000)
+  .style("fill", colorscale(msgdata));
 
 
   //tooltips
