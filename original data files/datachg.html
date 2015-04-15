@@ -1,0 +1,32 @@
+<html>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script>
+var margin = {top: 20, right: 20, bottom: 30, left: 40},
+    width = 960 - margin.left - margin.right,
+    height = 500 - margin.top - margin.bottom;
+
+var svg = d3.select("body").append("svg")
+    .attr("width", width + margin.left + margin.right+100)
+    .attr("height", height + margin.top + margin.bottom)
+  .append("g")
+    .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
+
+d3.json("Openstack/scm-demographics-aging.json", function(data){
+	//console.log(data.persons.id.length);
+	var date = data.date;
+	var newdate = date.setDate(date.getDate() - 40);
+	/*var newdate = new Date (  
+    date.getFullYear(),  
+    date.getMonth(),  
+    (date.getDate()-46)  
+);
+	console.log(newdate);
+	var id = data.persons.id;
+	var age = data.persons.age;
+	//console.log(age);
+	var name = data.persons.name;
+})
+</script>
+</body>
+</html>

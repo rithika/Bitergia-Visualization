@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<title>Time Zone World Map</title>
+<style>
+
+#vis path {
+  fill: none;
+  stroke: #111;
+}
+#vis tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: .5em; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  opacity: 0.9; 
+  position: absolute;
+}
+</style>
+</head>
+<body>
+<script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
+<script src='http://d3js.org/queue.v1.min.js'></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<div id = "vis"> </div>
+<script>
+var width, height,projection,path,svg,tooltip;
+
+function init() {
+  setMap();
+}
+
+function setMap() {
+
+  width = 1000,height = 600;
+
+  projection = d3.geo.mercator().scale(170).translate([width/2, height/2]).precision(.1);
+
+  path = d3.geo.path().projection(projection);
+
+  svg = d3.select("#vis").append("svg")
+  .attr("width",width)
+  .attr("height",height)
+  .call(d3.behavior.zoom().on("zoom",redraw))
+  .append("g");
+
+  tooltip = d3.select("#vis").append("div")
+            .attr("class", "tooltip hidden");
+
+function redraw() {
+  var s = d3.event.scale;
+  var t = d3.event.translate;
+
+  svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
+}
+
+loadData();
+
+}
+
+function loadData() {
+   queue()
+  .defer(d3.json,'timezones-topo2.json')
+  .defer(d3.json,'scm-timezone.json')
+  .await(processData);
+}
+
+function processData(error,world,timez) {
+   var tzdata = topojson.feature(world, world.objects.timezones).features;
+   var tzs = world.objects.timezones.geometries;
+   for (var i in tzdata) {
+    for(var j in timez){
+
+    }
+   }
+}
+
+function getDataRange() {
+  // function loops through all the data values from the current data attribute
+  // and returns the min and max values
+
+  var min = Infinity, max = -Infinity;  
+  d3.selectAll('.commits')
+    for(var i in timez.commits){
+      var currentValue = timez[i];
+      console.log(currentValue);
+      if(currentValue <= min && currentValue != -99 && currentValue != 'undefined') {
+        min = currentValue;
+      }
+      if(currentValue >= max && currentValue != -99 && currentValue != 'undefined') {
+        max = currentValue;
+      }
+  }
+  return [min,max];  //boomsauce
+}
+
+
+
+
+ 
+
+
+ 
+  /*var tzdata = topojson.feature(world, world.objects.timezones).features;
+  var msgdata = timez.commits;
+  //console.log(msgdata[0]);
+  var timedata = timez.tz;
+  //console.log(timedata);
+
+  var tz = svg.selectAll(".tz").data(tzdata);
+
+  tz.enter().insert("path")
+      .attr("class", "tz")
+      .attr("d", path)
+      .attr("title", function(d,i) { 
+        var string = d.properties.Name;
+        var array = [];
+        array = string.split("\n");
+         console.log(array);
+         //console.log(typeof array);
+        return d.properties.Name; 
+       })
+      .style("fill", function(d, i) {(d.properties.Name.replace(/[A-Za-z ]/g,"")) });
+
+
+  //tooltips
+  tz.on("mousemove", function(d,i) {
+      var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
+        tooltip
+          .classed("hidden", false)
+          .attr("style", "left:"+(mouse[0]+20)+"px;top:"+(mouse[1]+100)+"px")
+          .html(d.properties.Name)
+      })
+      .on("mouseout",  function(d,i) {
+        tooltip.classed("hidden", true)
+      });           
+}
+
+})(d3);*/
+</script>
+</body>
+</html>
