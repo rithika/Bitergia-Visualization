@@ -30,8 +30,8 @@
 <script>
 var Viz = (function(d3){
   queue()
-  .defer(d3.json,'timezones-topo2.json')
-  .defer(d3.json,'scm-timezone.json')//function(d){ rateByCommits.set(d.commits, +d.tz); })
+  .defer(d3.json,'data/timezones-topo2.json')
+  .defer(d3.json,'data/scm-timezone.json')//function(d){ rateByCommits.set(d.commits, +d.tz); })
   .await(createMap);
 
 var width = 1000,height = 600;
@@ -85,7 +85,7 @@ function redraw() {
   }
         return d.properties.Name;})
       .style("fill", function(d, i) {return color (d.properties.Name) });
-console.log(count);
+
   //tooltips
   tz.on("mousemove", function(d,i) {
       var mouse = d3.mouse(svg.node()).map( function(d) { return parseInt(d); } );
