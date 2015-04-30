@@ -31,16 +31,17 @@
 var Viz = (function(d3){
   queue()
   .defer(d3.json,'data/timezones-topo2.json')
-  .defer(d3.json,'data/scm-timezone.json')//function(d){ rateByCommits.set(d.commits, +d.tz); })
+  .defer(d3.json,'scm-timezone.json')//function(d){ rateByCommits.set(d.commits, +d.tz); })
   .await(createMap);
 
 var width = 1000,height = 600;
 
-var rateByCommits = d3.map();
+//var rateByCommits = d3.map();
 
 var projection = d3.geo.mercator();
 
-var color = d3.scale.ordinal().domain([0,775000]).range(colorbrewer.YlGn[9]);
+//var color = d3.scale.ordinal().range(colorbrewer.YlGn[9]);
+var color = d3.scale.category20();
 
 var path = d3.geo.path().projection(projection);
 
@@ -67,24 +68,16 @@ function redraw() {
   var timedata = timez.tz;
   //console.log(timedata);
 
-  var tz = svg.selectAll(".tz").data(tzdata);
-
+  var tz = svg.selectAll("abcd").data(tzdata);
+  console.log(tzdata[0]);
   var arr = [];
+  count = 0;
 
   tz.enter().insert("path")
       .attr("class", "tz")
       .attr("d", path)
-      .attr("title", function(d,i) {
-        var string = d.properties.Name;
-        arr.push(string);
-        var length = arr[0].length;
-        var nlen = length - 4;
-        console.log(nlen);
-        for(var i = length;i > nlen-1;i--) {
-
-  }
-        return d.properties.Name;})
-      .style("fill", function(d, i) {return color (d.properties.Name) });
+      .attr("title", function(d,i) {return d.properties.Name;})
+      .style("fill", function(d,i) {count += 1; console.log(count);return color (d.properties.Name) });
 
   //tooltips
   tz.on("mousemove", function(d,i) {

@@ -19,7 +19,7 @@
 			//Define map projection
 			var projection = d3.geo.albersUsa()
 								   .translate([w/2, h/2])
-								   .scale([500]);
+								    .scale([500]);
 
 			//Define path generator
 			var path = d3.geo.path()
@@ -41,13 +41,12 @@
 
 				//Set input domain for color scale
 				color.domain([
-					d3.min(data, function(d) { console.log(d);return d.value; }), 
+					d3.min(data, function(d) { console.log(typeof d.value); console.log(d.value);return d.value; }), 
 					d3.max(data, function(d) { return d.value; })
 				]);
 
 				//Load in GeoJSON data
 				d3.json("us-states.json", function(json) {
-
 					//Merge the ag. data and GeoJSON
 					//Loop through once for each ag. data value
 					for (var i = 0; i < data.length; i++) {
@@ -87,13 +86,14 @@
 					   		
 					   		if (value) {
 					   			//If value exists…
+					   			//console.log(value);
 						   		return color(value);
 					   		} else {
 					   			//If value is undefined…
 						   		return "#ccc";
 					   		}
 					   });
-			
+				console.log(json);
 				});
 			
 			});
