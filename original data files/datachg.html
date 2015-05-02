@@ -13,34 +13,41 @@ var svg = d3.select("body").append("svg")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
 d3.json("Openstack/scm-demographics-birth.json", function(data){
-	var date = new Date(data.date);
-	var one,none;
+	var one,none = 0;
 	var arr1 =[];
 	var arr2 =[];
-	console.log(date);
 	var age = data.persons.age;
 	var id = data.persons.id;
 	var name = data.persons.name;
-	var newdate = new Date(date);
-	console.log(age[0]);
-	for(var j = 0;j<age.length;j++){
-	for(var i = 0; i<=j;i++){
-		 one = age[j][i];
-		 if(one !== "\t"){
-		 arr1.push(one);
-		 none = arr1.join('');
-		}
-		else { break;}
-	}	
-	//console.log(none);
-	//console.log(arr2);	
-	/*newdate.setDate(newdate.getDate() - none);
-	var nd = new Date(newdate);
-	var year = nd.getFullYear();
-	console.log('the new date is '+nd);
-	console.log(year);*/
-}
-})
+	for(var j = 0;j < age.length;j++){
+		var date = new Date(data.date);
+			one = age[j];
+			none = one.substr(0, one.indexOf(' '));	
+		var nd = new Date(date.setDate(date.getDate() - none));
+		var year = nd.getFullYear();
+			arr1.push(year);
+	}
+// arr1 accessible here; it has all the start years for the contributors from start
+
+});
+d3.json("Openstack/scm-demographics-aging.json", function(data){
+	var one1,none1 = 0;
+	var arr2 =[];
+	var age1 = data.persons.age;
+	var id1 = data.persons.id;
+	var name1 = data.persons.name;
+	for(var i = 0;i < age1.length;i++){
+		var date1 = new Date(data.date);
+			one1 = age1[i];
+			none1 = one1.substr(0, one1.indexOf(' '));	
+		var nd1 = new Date(date1.setDate(date1.getDate() - none1));
+		var year1 = nd1.getFullYear();
+		console.log(year1);
+			arr2.push(year1);
+	}
+// arr2 accessible here; it has all the start years for the contributors still left
+
+});
 </script>
 </body>
 </html>
