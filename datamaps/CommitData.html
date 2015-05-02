@@ -4,6 +4,7 @@
 <title>Time Zone World Map</title>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <link type="text/css" rel="stylesheet" href="colorbrewer.css"/>
 </head>
 <body>
@@ -36,11 +37,16 @@
 
   d3.json("world.json", function(json){
 
+ /* var tzdata = topojson.feature(json, json.objects.timezones).features;
+   var tz = svg.selectAll(".tz").data(tzdata);*/
+     //console.log(tzdata);
     for(var i = 0;i < data.tz.length;i++){
 
       var dataTZ = data.tz[i];
 
       var commitValue = parseInt(data.commits[i]);
+
+      //var length = function(d,i) {return d.properties.Name.length; }
 
       for(var j = 0;j<json.features.length;j++){
 
@@ -59,6 +65,7 @@
         .insert("path")
         .attr("d",path)
         .style("fill", function(d) {
+          console.log(d);
           var val = d.properties.value;
           if(val){ return color(val); }
           else { return "white"; }
