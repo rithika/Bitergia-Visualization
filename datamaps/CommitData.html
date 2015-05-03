@@ -5,23 +5,19 @@
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
+<script src="fisheye-0.0.3.js"></script>
 <link type="text/css" rel="stylesheet" href="colorbrewer.css"/>
 <style>
+
 #viz path {
   fill: none;
   stroke: #111;
 }
 
-div.tooltip {
-  color: #222; 
-  background: #fff; 
-  padding: .5em; 
-  text-shadow: #f5f5f5 0 1px 0;
-  border-radius: 2px; 
-  box-shadow: 0px 0px 2px 0px #a6a6a6; 
-  opacity: 0.9; 
-  position: absolute;
+.graticule {
+  stroke: #aaa;
 }
+
 </style>
 </head>
 <body>
@@ -31,9 +27,12 @@ div.tooltip {
   var height = 600;
 
   var d = [];
-  var projection = d3.geo.mercator();
+
+  var projection = d3.geo.equirectangular();
 
   var path = d3.geo.path().projection(projection);
+
+  var graticule = d3.geo.graticule();
 
   var color = d3.scale.ordinal().range(colorbrewer.YlGn[9]);
 
@@ -43,8 +42,10 @@ div.tooltip {
                           .call(d3.behavior.zoom().on("zoom",redraw))
                           .append("g");
 
-  var tooltip = d3.select("#vis").append("div")
-            .attr("class", "tooltip hidden");
+  svg.append("path")
+    .datum(graticule)
+    .attr("class", "graticule")
+    .attr("d", path);
 
   function redraw() {
   var s = d3.event.scale;
@@ -64,7 +65,7 @@ div.tooltip {
   d3.json("data/timezones-topo2.json", function(json){
 
  var tzdata = topojson.feature(json, json.objects.timezones).features;
-   //console.log(tzdata);
+   console.log(tzdata);
 
     for(var i = 0;i < data.tz.length;i++){
 
@@ -88,10 +89,10 @@ div.tooltip {
         }
       }
     }
-   var tz = svg.selectAll("path")
-        .data(tzdata);
-
-        tz.enter() 
+   
+      var tz = svg.selectAll("path")
+        .data(tzdata)
+        .enter() 
         .insert("path")
         .attr("class", "tz")
         .attr("d",path)
@@ -100,18 +101,9 @@ div.tooltip {
           var val = d.properties.value;
           if(val){ return color(val); }
           else { return "pink"; }
-                });
-
-         tz.on("mousemove", function(d,i) {
-      var mouse = d3.mouse(svg.node()).map( function(d) {return parseInt(d); } );
-        tooltip
-          .classed("hidden", false)
-          .attr("style", "left:"+(mouse[0]+20)+"px;top:"+(mouse[1]+100)+"px")
-          .text(d.properties.Name)
-      })
-      .on("mouseout",  function(d,i) {
-        tooltip.classed("hidden", true)
-      }); 
+                })
+         .append("svg:title")
+          .text(function(d, i) { return "Country: " + d.properties.Name +"\n" + "Authors: " + d.properties.authors });
             });
          });
 
