@@ -7,7 +7,7 @@
   fill: none;
   stroke: #111;
 }
-#vis tooltip {
+div.tooltip {
   color: #222; 
   background: #fff; 
   padding: .5em; 
@@ -69,7 +69,7 @@ function redraw() {
   //console.log(timedata);
 
   var tz = svg.selectAll("abcd").data(tzdata);
-  console.log(tzdata);
+  console.log(tzdata.length);
   var arr = [];
   count = 0;
 
@@ -77,7 +77,7 @@ function redraw() {
       .attr("class", "tz")
       .attr("d", path)
       .attr("title", function(d,i) {return d.properties.Name;})
-      .style("fill", function(d,i) {count += 1; console.log(count);return color (d.properties.Name) });
+      .style("fill", function(d,i) {return color (d.properties.Name) });
 
   //tooltips
   tz.on("mousemove", function(d,i) {

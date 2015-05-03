@@ -6,6 +6,23 @@
 <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
 <link type="text/css" rel="stylesheet" href="colorbrewer.css"/>
+<style>
+#viz path {
+  fill: none;
+  stroke: #111;
+}
+
+div.tooltip {
+  color: #222; 
+  background: #fff; 
+  padding: .5em; 
+  text-shadow: #f5f5f5 0 1px 0;
+  border-radius: 2px; 
+  box-shadow: 0px 0px 2px 0px #a6a6a6; 
+  opacity: 0.9; 
+  position: absolute;
+}
+</style>
 </head>
 <body>
   <div id="viz"></div>
@@ -14,10 +31,7 @@
   var height = 600;
 
   var d = [];
-  var projection = d3.geo.mercator()
-                    .translate([width/2, height/2])
-                    .center([0,5])
-                    .scale(500);
+  var projection = d3.geo.mercator();
 
   var path = d3.geo.path().projection(projection);
 
@@ -25,7 +39,19 @@
 
   var svg = d3.select("#viz").append("svg")
                           .attr("width",width)
-                          .attr("height",height);
+                          .attr("height",height)
+                          .call(d3.behavior.zoom().on("zoom",redraw))
+                          .append("g");
+
+  var tooltip = d3.select("#vis").append("div")
+            .attr("class", "tooltip hidden");
+
+  function redraw() {
+  var s = d3.event.scale;
+  var t = d3.event.translate;
+
+  svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
+}
 
   d3.json('scm-timezone.json', function(data){
    var com = data.commits;
@@ -35,41 +61,57 @@
      d3.max(d[0])
       ]);
 
-  d3.json("world.json", function(json){
+  d3.json("data/timezones-topo2.json", function(json){
 
- /* var tzdata = topojson.feature(json, json.objects.timezones).features;
-   var tz = svg.selectAll(".tz").data(tzdata);*/
-     //console.log(tzdata);
+ var tzdata = topojson.feature(json, json.objects.timezones).features;
+   //console.log(tzdata);
+
     for(var i = 0;i < data.tz.length;i++){
 
       var dataTZ = data.tz[i];
 
       var commitValue = parseInt(data.commits[i]);
 
-      //var length = function(d,i) {return d.properties.Name.length; }
+      var authorValue = parseInt(data.authors[i]);
 
-      for(var j = 0;j<json.features.length;j++){
+      for(var j = 0;j<tzdata.length;j++){
 
-        var jsonTZ = json.features[j].properties.description;
+        var jsonTZ = tzdata[j].properties.tz;
+        //console.log(jsonTZ);
 
         if(dataTZ == jsonTZ) {
 
-          json.features[j].properties.value = commitValue;
+          tzdata[j].properties.value = commitValue;
+          tzdata[j].properties.authors = authorValue;
+          //console.log(tzdata[j].properties.value);
 
         }
       }
     }
-    svg.selectAll("path")
-        .data(json.features)
-        .enter() 
+   var tz = svg.selectAll("path")
+        .data(tzdata);
+
+        tz.enter() 
         .insert("path")
+        .attr("class", "tz")
         .attr("d",path)
+        .attr("title", function(d,i) {return d.properties.Name;})
         .style("fill", function(d) {
-          console.log(d);
           var val = d.properties.value;
           if(val){ return color(val); }
-          else { return "white"; }
+          else { return "pink"; }
                 });
+
+         tz.on("mousemove", function(d,i) {
+      var mouse = d3.mouse(svg.node()).map( function(d) {return parseInt(d); } );
+        tooltip
+          .classed("hidden", false)
+          .attr("style", "left:"+(mouse[0]+20)+"px;top:"+(mouse[1]+100)+"px")
+          .text(d.properties.Name)
+      })
+      .on("mouseout",  function(d,i) {
+        tooltip.classed("hidden", true)
+      }); 
             });
          });
 
