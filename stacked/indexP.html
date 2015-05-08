@@ -28,7 +28,7 @@ body {
 
 </style>
 <body>
-   <center><h2>Stacked chart for Age of author commits(percent)</h2></center>
+   <center><h2>Stacked chart for Age of author in a community(percent)</h2></center>
 <script src="http://d3js.org/d3.v3.min.js"></script>
 <script>
 
@@ -43,7 +43,7 @@ var y = d3.scale.linear()
     .rangeRound([height, 0]);
 
 var color = d3.scale.ordinal()
-    .range(["#6b486b", "#a05d56", "#d0743c", "#ff8c00"]);
+    .range(["#6b486b", "#ff8c00"]);
 
 var xAxis = d3.svg.axis()
     .scale(x)
@@ -60,7 +60,7 @@ var svg = d3.select("body").append("svg")
   .append("g")
     .attr("transform", "translate(" + margin.left + "," + margin.top + ")");
 
-d3.json("datanew.json", function(error, data) {
+d3.csv("newdata.csv", function(error, data) {
   color.domain(d3.keys(data[0]).filter(function(key) { return key !== "Year"; }));
 
   data.forEach(function(d) {
@@ -68,8 +68,6 @@ d3.json("datanew.json", function(error, data) {
     d.ages = color.domain().map(function(name) { return {name: name, y0: y0, y1: y0 += +d[name]}; });
     d.ages.forEach(function(d) { d.y0 /= y0; d.y1 /= y0; });
   });
-
-  //data.sort(function(a, b) { return b.ages[0].y1 - a.ages[0].y1; });
 
   x.domain(data.map(function(d) { return d.Year; }));
 

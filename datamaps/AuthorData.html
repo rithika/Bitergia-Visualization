@@ -21,14 +21,14 @@
 </style>
 </head>
 <body>
-  <h1> Shaded as per Commits per TimeZone </h1>
+   <h1> Shaded as per Authors per TimeZone </h1>
   <div id="viz"></div>
 <script>
   var width = 1500;
   var height = 600;
 
-  var ext_color_domain = [100, 500, 5000, 50000, 500000]
-  var legend_labels = ["< 100", "500+", "5000+", "50000+", "> 500000"] 
+  var ext_color_domain = [50, 250, 500, 1000, 2500]
+  var legend_labels = ["< 50", "250+", "500+", "1000+", "> 2500"] 
 
   var d = [];
 
@@ -38,9 +38,9 @@
 
   var graticule = d3.geo.graticule();
 
-  var color = d3.scale.threshold()
+ var color = d3.scale.threshold()
   .domain(ext_color_domain)
-  .range(['rgb(237,248,251)','rgb(204,236,230)','rgb(153,216,201)','rgb(102,194,164)','rgb(44,162,95)','rgb(0,109,44)']);
+  .range(['rgb(239,243,255)','rgb(198,219,239)','rgb(158,202,225)','rgb(107,174,214)','rgb(49,130,189)','rgb(8,81,156)']);
 
   var svg = d3.select("#viz").append("svg")
                           .attr("width",width)
@@ -61,7 +61,7 @@
 }
 
   d3.json('scm-timezone.json', function(data){
-   var com = data.commits;
+   var com = data.authors;
    d.push(com);
 
   d3.json("data/timezones-topo2.json", function(json){
@@ -103,14 +103,15 @@
         .attr("d",path)
         .attr("title", function(d,i) {return d.properties.Name;})
         .style("fill", function(d) {
-          var val = d.properties.value;
+          console.log(d);
+          var val = d.properties.authors;
           if(val){ return color(val); }
           else { return "pink"; }
                 })
          .append("svg:title")
-          .text(function(d, i) { return "Country: " + d.properties.Name +"\n" + "Authors: " + d.properties.authors });
+          .text(function(d, i) { return "Country: " + d.properties.Name +"\n" + "Commits: " + d.properties.value });
 
-var legend = svg.selectAll("g.legend")
+  var legend = svg.selectAll("g.legend")
   .data(ext_color_domain)
   .enter().append("g")
   .attr("class", "legend");
@@ -129,6 +130,7 @@ var legend = svg.selectAll("g.legend")
   .attr("x", 1000)
   .attr("y", function(d, i){ return height - (i*ls_h) - 19*ls_h;})
   .text(function(d, i){ return legend_labels[i]; });
+
 
             });         
 

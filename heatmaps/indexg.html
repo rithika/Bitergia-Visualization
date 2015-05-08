@@ -50,7 +50,7 @@
 	
 
 	d3.json("convertcsv2.json",function(data) {
-		console.log(data);
+		//console.log(data);
 	dataset = data;
 	
 	var dataValue = [];
@@ -68,6 +68,7 @@
 
 	var colorscale = d3.scale.quantile()
 	.domain([0, d3.max(dataValue, function(d){
+	//	console.log(d);
 		return d[2];
 	})])
 	.range(colors);
