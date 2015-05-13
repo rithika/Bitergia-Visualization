@@ -28,6 +28,7 @@ d3.json("Openstack/scm-demographics-birth.json", function(data){
 			arr1.push(year);
 	}
 // arr1 accessible here; it has all the start years for the contributors from start
+//console.log(arr1);
 var copy = arr1.slice(0);
 for (var i = 0; i < arr1.length; i++) {
  
@@ -50,7 +51,7 @@ for (var i = 0; i < arr1.length; i++) {
 		}
 	}
  
-	console.log(comp);
+	//console.log(comp);
 
 });
 d3.json("Openstack/scm-demographics-aging.json", function(data){
@@ -69,6 +70,7 @@ d3.json("Openstack/scm-demographics-aging.json", function(data){
 			arr2.push(year1);
 	}
 // arr2 accessible here; it has all the start years for the contributors still left
+//console.log(arr2);
 var copy1 = arr2.slice(0);
 for (var i = 0; i < arr2.length; i++) {
  
@@ -91,7 +93,7 @@ for (var i = 0; i < arr2.length; i++) {
 		}
 	}
  
-	console.log(comp1);
+	//console.log(comp1);
 
 });
 </script>
