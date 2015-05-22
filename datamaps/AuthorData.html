@@ -60,6 +60,8 @@
     .attr("class", "graticule")
     .attr("d", path);
 
+   svg.call(t);
+
   function redraw() {
   var s = d3.event.scale;
   var t = d3.event.translate;
