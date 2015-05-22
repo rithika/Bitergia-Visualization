@@ -3,9 +3,10 @@
 <meta charset="utf-8">
 <title>Time Zone World Map</title>
 <script src="http://d3js.org/d3.v3.min.js"></script>
+<script src="http://d3js.org/d3.geo.projection.v0.min.js"></script>
 <script src="http://d3js.org/colorbrewer.v1.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/1.6.9/topojson.min.js"></script>
-<script src="fisheye-0.0.3.js"></script>
+<script src="textures.min.js"></script>
 <link type="text/css" rel="stylesheet" href="colorbrewer.css"/>
 <style>
 
@@ -27,12 +28,18 @@
   var width = 1500;
   var height = 600;
 
+   var t = textures.circles()
+    .size(10)
+    .radius(2)
+    .fill("firebrick")
+    .background("darkorange");
+
   var ext_color_domain = [25, 50, 100, 500]
   var legend_labels = ["< 25", "50+", "100+", "> 500"] 
 
   var d = [];
 
-  var projection = d3.geo.equirectangular();
+  var projection = d3.geo.winkel3();
 
   var path = d3.geo.path().projection(projection);
 
@@ -105,8 +112,8 @@
         .style("fill", function(d) {
           console.log(d);
           var val = d.properties.div;
-          if(val){ return color(val); }
-          else { return "pink"; }
+          if(val || val == 0){ return color(val); }
+          else { return t.url(); }
                 })
          .append("svg:title")
           .text(function(d, i) { return "Country: " + d.properties.Name +"\n" + "Commits: " + d.properties.value + "\n" + "Authors: " + d.properties.authors });
