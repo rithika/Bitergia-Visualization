@@ -69,7 +69,7 @@
   svg.style("stroke-width", 1 / s).attr("transform", "translate(" + t + ")scale(" + s + ")");
 }
 
-  d3.json('scm-timezone.json', function(data){
+  d3.json('data/scm-timezone.json', function(data){
    var com = data.population;
    d.push(com);
 
@@ -86,9 +86,9 @@
 
       var authorValue = parseInt(data.authors[i]);
 
-      var commitsByauthors = parseFloat(data.commitsByauthors[i]);
+      var commitsByauthors = parseFloat(data.commits[i]/data.authors[i]);
 
-      var dataset = data.commits[i]/data.population[i];
+      var dataset = parseFloat(data.commits[i]/data.population[i]);
       console.log(dataset);
 
 
