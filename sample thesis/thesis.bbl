@@ -1,0 +1,64 @@
+\begin{thebibliography}{10}
+
+\bibitem{chaslot2008monte}
+Guillaume Chaslot, Sander Bakkes, Istvan Szita, and Pieter Spronck.
+\newblock Monte-carlo tree search: A new framework for game ai.
+\newblock In {\em AIIDE}, 2008.
+
+\bibitem{gelly2007combining}
+Sylvain Gelly and David Silver.
+\newblock Combining online and offline knowledge in uct.
+\newblock In {\em Proceedings of the 24th international conference on Machine
+  learning}, pages 273--280. ACM, 2007.
+
+\bibitem{chaslot2008parallel}
+Guillaume MJ-B Chaslot, Mark~HM Winands, and H~Jaap van Den~Herik.
+\newblock Parallel monte-carlo tree search.
+\newblock In {\em Computers and Games}, pages 60--71. Springer, 2008.
+
+\bibitem{fern2011ensemble}
+Alan Fern and Paul Lewis.
+\newblock Ensemble monte-carlo planning: An empirical study.
+\newblock In {\em ICAPS}, 2011.
+
+\bibitem{rocki2011parallel}
+Kamil Rocki and Reiji Suda.
+\newblock Parallel monte carlo tree search on gpu.
+\newblock In {\em SCAI}, pages 80--89, 2011.
+
+\bibitem{browne2012survey}
+Cameron~B Browne, Edward Powley, Daniel Whitehouse, Simon~M Lucas, Peter~I
+  Cowling, Philipp Rohlfshagen, Stephen Tavener, Diego Perez, Spyridon
+  Samothrakis, and Simon Colton.
+\newblock A survey of monte carlo tree search methods.
+\newblock {\em Computational Intelligence and AI in Games, IEEE Transactions
+  on}, 4(1):1--43, 2012.
+
+\bibitem{enzenberger2010lock}
+Markus Enzenberger and Martin M{\"u}ller.
+\newblock A lock-free multithreaded monte-carlo tree search algorithm.
+\newblock In {\em Advances in Computer Games}, pages 14--20. Springer, 2010.
+
+\bibitem{rolloutlecture}
+Alan Fern.
+\newblock {CS 533 Intelligent Agents and Decision Making. Lecture topics and
+  Reading.}
+\newblock
+  \url{http://web.engr.oregonstate.edu/~afern/classes/cs533/lectures.html}.
+
+\bibitem{kocsis2006bandit}
+Levente Kocsis and Csaba Szepesv{\'a}ri.
+\newblock Bandit based monte-carlo planning.
+\newblock In {\em Machine Learning: ECML 2006}, pages 282--293. Springer, 2006.
+
+\bibitem{glenn2006optimal}
+James Glenn.
+\newblock An optimal strategy for yahtzee.
+\newblock {\em Loyola College in Maryland, Tech. Rep. CS-TR-0002}, 2006.
+
+\bibitem{yahtzeerules}
+Matthew Crumley.
+\newblock {Regular Yahtzee Game Rules / Instructions}.
+\newblock \url{http://yahtzee-rules.com/}, 2011.
+
+\end{thebibliography}
