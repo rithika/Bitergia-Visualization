@@ -1,19 +1,56 @@
 \begin{thebibliography}{10}
 
+\bibitem{robles2006}
+Robles G , Barahona M Jesus.
+\newblock Geographic Location of Developers at SourceForge,
+\newblock {\em MSR},2006.
+
 \bibitem{yuri2010}
 Takhteyev Y , Hilts A.
-\newblock Investigating the Geography of Open SourceSoftware through Github,
+\newblock Investigating the Geography of Open Source Software through Github,
 \newblock 2010.
+
+\bibitem{kishida2003}
+Ye Y , Kishida K.
+\newblock Towards an Understanding of the motivation of Open Source Developers.
+\newblock In {\em ICSE},2003.
+
+\bibitem{seth2010}
+Sethanandha B.D , Massey B, Jones W.
+\newblock Managing open source contributions for software project sustainability,
+\newblock In {\em PICMET}, 2010.
+
+\bibitem{greg2002}
+Madey G, Freeh V, Tynan R.
+\newblock The Open Source Software Development
+Phenomenon: An analysis based on
+social network theory,
+\newblock In {\em 8th Americas Conference on Information Systems}, 2002.
 
 \bibitem{crowston2005}
 Crowston K , Howison J.
 \newblock The Social Structure of Free and Open Source Software Development.
 \newblock In {\em First Monday}, 2005.
 
-\bibitem{kishida2003}
-Ye Y , Kishida K.
-\newblock Towards an Understanding of the motivation of Open Source Developers.
-\newblock In {\em ICSE},2003.
+\bibitem{von2010}
+Von Engelhardt S, Freytag A, Schulz C.
+\newblock On the Geographic Allocation of Open Source Software Activities.
+\newblock In {\em Jena Economic Research Papers}, 2010.
+
+\bibitem{ghosh2005}
+Ghosh R.
+\newblock Understanding free software developers:Findings from the FLOSS study,
+\newblock In {\em MIT Press,Boston}, 2005.
+
+\bibitem{tuomi2004}
+Tuomi I.
+\newblock Evolution of Linux credits file: Methodological challenges and reference data for open source research,
+\newblock In {\em First Monday}, 2004.
+
+\bibitem{mockus2002}
+Mockus A, Fielding R, Herbsleb J.
+\newblock Two case studies of open source software development:Apache and Mozilla,
+\newblock In {\em TOSEM}, 2002.
 
 \bibitem{wiki}
 \newblock https://en.wikipedia.org/wiki/Anscombe%27s_quartet
