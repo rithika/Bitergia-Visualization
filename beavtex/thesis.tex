@@ -1,5 +1,5 @@
 
-\documentclass[double,12pt]{beavtex}
+\documentclass[seploa]{beavtex}
 \title{Visualizing Contribution Patterns in Open Source}
 \author{Rithika Kiran Naik}
 \degree{Master of Science}
@@ -13,7 +13,9 @@
 \commencementyear{2015}
 \usepackage{graphicx}
 \graphicspath{ {images/} }
-
+\usepackage{caption}
+\usepackage{float}
+\restylefloat{table}
 
 
 \abstract{Open Source software gives users the freedom to copy, modify and redistribute source code without legal entanglements. The evolution of these software communities usually depend a lot on how the participating developers and users interact and co-operate with each other. Over the past few years, open source software have become widely accepted and used, hence making the study of their organization and sustainability a very hot topic. To understand the working philosophy, health, and evolution of any open source project, one needs to look at a variety of factors like community interaction, strength of connections, recruiting and mortality, support and contribution patterns. Getting, sharing and analyzing Software Development metrics and information related to open source projects has thus become important, with many projects and companies looking to do so. The main challenge however is distilling large amounts of data into actionable intelligence. The main idea behind this work is to help communities and others understand contribution patterns in open source projects through the use of various visualization techniques. }
@@ -28,10 +30,6 @@ My dream of pursuing a Masters degree would not have been fulfilled if not for m
 }
 
 \begin{document}
-
-\listoftables
-
-\clearpage
 
 \maketitle
 
@@ -57,7 +55,15 @@ The choice of projects was done mainly keeping in mind that we cover a variety o
 \chapter{Related Work}
 Researchers all over the world have performed different types of studies, surveys, observations etc on the trends in open source projects.
 \section{Experience of Developers}
-In 2002, a study was conducted on two open source projects,Apache and Mozilla,to understand open source development. One of the parameters that was looked at was developer participation where they looked at the frequency of contributions over a period of time. They concluded that very few developers who are not a part of the core group contribute regularly in Apache and Mozilla showed that the core group was very active as well\cite{mockus2002}. The professors of Notre Dame University studied the parameter on a larger group of varied open source projects for better understanding of open source project development. They noted that developers in open source projects are not as well connected as developers in other collaborative networks. Also developers were more in number in general in larger more successful projects than in smaller fairly unknown projects\cite{greg2002}. Studies have been conducted to know the age range of developers, motivations of developers, but the focus on understanding the time aspect of how long developers stay in an organization and finding a pattern of action for the same is our area of interest as this will give us an idea about the growth or downfall of an open source project.
+In 2002, a study was conducted on two open source projects,Apache and Mozilla,to understand open source development. One of the parameters that was looked at was developer participation where they looked at the frequency of contributions over a period of time. They concluded that very few developers who are not a part of the core group contribute regularly in Apache and Mozilla showed that the core group was very active as well\cite{mockus2002}. The professors of Notre Dame University studied the parameter on a larger group of varied open source projects for better understanding of open source project development. They noted that developers in open source projects are not as well connected as developers in other collaborative networks. Also developers were more in number in general in larger more successful projects than in smaller fairly unknown projects \cite{greg2002}. Studies have been conducted to know the age range of developers, motivations of developers, but the focus on understanding the time aspect of how long developers stay in an organization and finding a pattern of action for the same is our area of interest as this will give us an idea about the growth or downfall of an open source project. In an article in 2014, researcher Jesus states that in order to gauge a community's health it is important to keep track of the developer ages. He goes on to state that attracting new developers is important but retainig the older ones also is a high priority task.The ratio of experienced, long term members to recent ones gives us details about the quality of code and the need to support members \cite{jes2014}.
+
+\textbf{Turnover}
+Shows how people are entering and leaving the community.An indication of the community's attractiveness.
+
+\textbf{Age}
+Measures how long ago each current member joined a project. Gives out how many people are available at different stages of experience, from old-timers to newbies.
+
+Together these metrics can be used to estimate engagement, to predict the future structure and size of the community, and to detect early potential problems that could prevent the healthy growth of a project \cite{jes2014}.
 
 \section{Geography of Developers}
 Its intriguing to note that though studies have been conducted to understand the motivations of the developers, understanding the range of developers contributing, be it geographically or age wise still has a lot of scope. Greogorio Robles and Gonzalez-Barahona were among the first ones to look into the geographic factors that influenced developer contributions. They collected data of all the registered users from sourceforge as it was the largest libre software web based platform which had data about geographic locations.After performing several techniques on this data they came up with a distribution of developers in different regions of the world\cite{robles2006}. The problem here was that the information about location or geography was not stored clearly in sourceforge.After this came the study by Takhteyev Y , Hilts A and they studied open source data made availble by Github, which was becoming a pioneering source management software. But there were problems here as well as the dataset was either incomplete or was not categorizable by TLDs \cite{yuri2010}. Then came the idea of looking at timezones and IP's of the systems of the users who contribute, both collected through sourceforge. But the issue with looking at IP addresses was that the dataset is not available to all and agreements needed to be signed for the same\cite{von2010}. Studies involving looking at mailing lists data to understand developer geography has not quite seen the light of day yet. If the data can be accessed then the same studies could show effective results as well. Results from the above mentioned studies all show that North American and European countries particularly USA are the major areas where developers are mostly located and work from.A survey by Ghosh et al\cite{ghosh2005} showed the influence of French, American and German developers but the survey that was cnducted by Tuomi et al\cite{tuomi2004} showed varied results leaning a lot towards US,UK,Canada and Germany.If the area is further widened and looked up on continent wise then North America takes the lead followed by Europe and clusters of Asia,Australia,South america and Africa and this was from the study by Greogorio Robles and Gonzalez-Barahona on sourceforge data\cite{robles2006}.
@@ -95,10 +101,10 @@ Now that they had the tools ready to extract the data, the next step was to buil
 2.vizGrimoireJS : Having the right kind of data in hand led to the need to have a dashboard kind of environment to shocase the data in a meaningful way. This tool hence creates dashboards with reports and visualizations of the data.
 
 \section{Task at hand}
-We were presented with two cases which needed improvised visualizations. The existing visualizations were not feasible to answer different kinds of questions that one can pose. We had to work through various visualizations in order to finalize on a nearly good enough solution. We will first talk about each of the two cases presented to us and then discuss the solutions that we fixed upon in the next chapter.
+We were presented with two cases which needed improvised visualizations. The existing visualizations were not feasible to answer different kinds of questions that one would pose. We had to work through various visualizations in order to finalize on a nearly good enough solution. We will first talk about each of the two cases presented to us and then discuss the solutions that we fixed upon in the next chapter.
 
 \textbf{CASE 1 - Experience of Developers}
-A lot has been discussed about the motivation for developers to join or stay or leave an open source project. The most sort after work being the onion model which describes the general roles that developers take and how they gravitate eventually \cite{crowston2005,  kishida2003}. The Bitergia team focused on calculating age in project for active developers at a certain time. They again had access to datasets which gave them the data needed to calculate the same. As a result of their work the following visualizations were built - 
+A lot has been discussed about the motivation for developers to join or stay or leave an open source project. The most sort after work being the onion model which describes the general roles that developers take and how they gravitate eventually \cite{crowston2005,  kishida2003}. The Bitergia team focused on calculating age in project for active developers at a certain time. They had access to datasets which gave them the data needed to calculate the same. As a result of their work the following visualizations were built - 
 
 \begin{figure}[!ht]
 \centering
@@ -112,7 +118,7 @@ A lot has been discussed about the motivation for developers to join or stay or 
 \caption{Comparison for pyramids every two years}
 \end{figure}
 
-The problem here was that, the 3D visualization, though colorful, was a little hard to relate to understand the dynamics. WHAT ELSE IS WRONG ?????? My visuals are the same!
+The problem here was that, the 3D visualization, though colorful, was a little hard to relate to, to understand the dynamics.Also the bar charts were an absolute mark of the developer numbers at any given time but they were not enough to know which group of developers were actually staying and which ones were leaving. Turnover and age were not quite well depicted was the intial thoughts of the team.
 
  \textbf{CASE 2 -Where do Developers work ?}
 
@@ -174,80 +180,107 @@ This is an open source software which deploys and manages networks of virtual ma
 As the visualizations needed flexibility the most ideal tool in hand was D3.js. D3 is a javascript library built by Mike Bostock which has the capacity to build interactive, dynamic and a big variety of visualizations. It is largely based on HTML5, CSS and SVG. It makes rendering the visualizations on any browser extremely convenient and easy as well. Due to the large developer support available for the library, it was an ideal choice to build the final visualizations in.It accepts external data in the form of json,CSV or TSV. Being a javascript library, it follows the same syntax hence making data manipulation quick. D3 API has hundreds of functions which make gives it its community. This library is widely used by big corporates like Datameer, The New York Times, OpenStreetMap etc.
 
 \section{Bitergia Implementations}
+We first go onto view the implemetations done by team Bitergia to analyse the data set in hand. Figure \ref{fig:devExp} is used to show the experience of developers and makes use of a bar chart. The y axis is age in quarters for long a developer has stayed and the x axis is the number of developers.
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=90mm]{image11.PNG}
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=50mm]{image11.PNG}
+\end{center}
 \caption{Experience of Developers}
+\label{fig:devExp}
 \end{figure}
 
-\begin{figure}[!ht]
-\centering
-\includegraphics[width=90mm]{image12.PNG}
+Figure \ref{fig:devWork} is used to view the number of messages incoming from different timezones. The y axis is number of messages and the x axis is the timezones of the world. These two implementations were created out of the same datasets that we used for our implementations as well.
+
+\begin{figure}[H]
+\begin{center}
+\includegraphics[width=50mm]{image12.PNG}
+\end{center}
 \caption{Where do Developers Work?}
+\label{fig:devWork}
 \end{figure}
-
 
 \section{Our Solutions}
+Figure \ref{fig:devTurn} is a bar grouped bar chart which has two main data sets - one column shows the number of developers who join the project each year i.e New developers and the second column shows the number of developers that are still a part of the project each year.
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image1.PNG}
 \caption{Developer Turnover}
+\label{fig:devTurn}
 \end{figure}
 
-\begin{figure}[!ht]
+Figure \ref{fig:actAuth} is a stacked bar chart which gives an individual and a total lok at the number of developers that are still active in a project over the years.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image2.PNG}
 \caption{Active Authors Across the Years}
+\label{fig:actAuth}
 \end{figure}
 
-\begin{figure}[!ht]
+Figure \ref{fig:devMort} is a also a stacked chart which shows the conversion rate i.e percentage of developers that stay back in a project each year and the mortality rate i.e percentage of developers that leave the project each year.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image3.PNG}
 \caption{Developer Mortality by Joining Date}
+\label{fig:devMort}
 \end{figure}
 
-\begin{figure}[!ht]
+From Figure \ref{fig:auHub} to Figure \ref{fig:div3} are all map based visualizations which use color as a main encoding mechanism to show one parameter from the dataset. Figure \ref{fig:auHub} is shaded as per number of Authors present in each timezone and the data picked from github. Similarly Figure \ref{fig:auML} is shaded with the same parameter but the data is taken from the mailing lists.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image4.PNG}
 \caption{Authors per timezone - Github}
+\label{fig:auHub}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image5.PNG}
 \caption{Authors per timezone - Mailing lists}
+\label{fig:auML}
 \end{figure}
 
-\begin{figure}[!ht]
+Figure \ref{fig:coHub} and Figure \ref{fig:mgML} are shaded as per commits per timezone,data taken from both Github and Mailing lists.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image6.PNG}
 \caption{Commits per timezone - Github}
+\label{fig:coHub}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image7.PNG}
 \caption{Messages per timezone - Mailing lists}
+\label{fig:mgML}
 \end{figure}
 
-\begin{figure}[!ht]
+Figures \ref{fig:div1}, \ref{fig:div2} and \ref{fig:div3} are maps which are shaded with different parameters and the aim here was to try and find a norm or trend that existed for each of the projects.
+
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image8.PNG}
 \caption{Contributions/Author per timezone - Github}
+\label{fig:div1}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image9.PNG}
 \caption{Messages/Author per timezone - Mailing lists}
+\label{fig:div2}
 \end{figure}
 
-\begin{figure}[!ht]
+\begin{figure}[H]
 \centering
 \includegraphics[width=110mm,height=50mm]{image10.PNG}
 \caption{Commits/Population per timezone - Github}
+\label{fig:div3}
 \end{figure}
 
 \chapter{User study}
@@ -256,6 +289,8 @@ In order to gauge the quality and impact of the visualizations, we conducted a f
 \section{Participants}
 We recruited 6 participants over the age of 18 through the OSU engineering groups by sending out recruitment emails and participant's word of mouth. Table 1 gives an overview of participant demographics. All the participants had some sort of prior experience with software development and have worked with data visualizations at some level. They were made to sign the consent forms before the session started and were also asked for permission to be recorded.Notes were taken and,if audio recorded,transcribed by the researcher.
 
+\begin{table}
+\centering
 \begin{tabular}{ |p{3cm}||p{5cm}|p{3cm}|p{3cm}|  }
  \hline
 Participant Code Name & Degree and Major & Age & Gender\\
@@ -268,6 +303,9 @@ Participant Code Name & Degree and Major & Age & Gender\\
  A6 & Masters, Electrical and Computer Engineering & 22 & Female\\
  \hline
 \end{tabular}
+\caption{Participant Demographics}
+\label{tab:table1}
+\end{table}
 
 \section{Study Session}
 The participants on arrival were given a nametag with their code names and scenario numbers. Three of the participants were asked to look at the visualizations done by Bitergia and three of them were given the visualizations done by us. The goal was to make the participants use both the visualizations and then have a discussion about their effectiveness. The participants were not told beforehand which visualizations they would be handling first. After having completed the tasks with one scenario, the participants then swapped and completed the same tasks with the second scenario.This took up almost 40 minutes of the session.Once done, the participants were then led to a discussion session where they were asked some questions with regard to the visualizations to bring out their opinions and views about each of the implementations.The questions that were posed basically tried to cover various metrics which would be used to evaluate the visualizations.They were mostly open ended and covered the following topics: a)How close to context were the visualizations, b)was it easy to understand and use, c)were meaningful outcomes being drawn, d)how they dealt with missing data etc.The discussion was facilitated by a researcher and the participants were probed from time to time in case they deviated from the discussion path. All the participants were very enthusiastic and brought out some very interesting points during the course of the discussion. The session lasted for about 2 hours and the collected results were then analysed by means of thematic coding.
@@ -308,6 +346,7 @@ Case1
 
 1.How does the general trend move towards the number of developers joining each year?
 
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Apache CloudStack: The project probably started in 2010 (no established developers), and with a sizeable community (40-50 people) . Perhaps it was outsourced then. And then, there was an increase in the number of developers joining between 2010-2013. Decreased in 2014 and dropped in 2015. The ratio of new to established developers also followed a similar trend until 2012, and dropped between 2013-2015.\\
@@ -319,11 +358,14 @@ Case1
  A6 & In most cases until 2014 it increased but there was decrease in number of developers in 2015.\\
  \hline
 \end{tabular}
+\caption{Task Response 1 - scenarioA, case1}
+\label{tab:table1}
+\end{table}
 
 
 2.Is the number of developers joining a project proportional to the number of developers leaving a project?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Yes\\
@@ -335,11 +377,14 @@ Case1
  A6 & Yes\\
  \hline
 \end{tabular}
+\caption{Task Response 2 - scenarioA, case1}
+\label{tab:table2}
+\end{table}
 
 
 3.Does the fame of a project lead to it in having more developers join it?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Probably yes. The number of new developers increase as the total number of developers in the project also increase. They also drop simultaneously. The year 2014 was probably the golden age of the project.\\
@@ -351,11 +396,14 @@ Case1
  A6 & Yes\\
  \hline
 \end{tabular}
+\caption{Task Response 3 - scenarioA, case1}
+\label{tab:table3}
+\end{table}
 
 
 4. Do you notice a trend between the conversion and mortality rates in the open source projects shown here?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Both rise, until in 2014 it stabilizes. More people stayed, and less newer people joined.\\
@@ -367,6 +415,9 @@ Case1
  A6 & In most cases mortality rate decreases\\
  \hline
 \end{tabular}
+\caption{Task Response 4 - scenarioA, case1}
+\label{tab:table4}
+\end{table}
 
 
 Case2
@@ -374,7 +425,7 @@ Case2
 
 1.In any given time zone, does a high number of commits indicate a large number of contributor/author presence?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & No.\\
@@ -386,11 +437,14 @@ Case2
  A6 & Yes.\\
  \hline
 \end{tabular}
+\caption{Task Response 1 - scenarioA, case2}
+\label{tab:table11}
+\end{table}
 
 
 2.Can we sense other trends to attribute to the performance levels at any given time zone like lack of Internet, education access etc. from the knowledge that we possess?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & No, Africa for example, has a high number commits per timezone.\\
@@ -402,11 +456,14 @@ Case2
  A6 & Yes.\\
  \hline
 \end{tabular}
+\caption{Task Response 2 - scenarioA, case2}
+\label{tab:table12}
+\end{table}
 
 
 3.Do highly populated regions/time zones have higher contribution rates?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & No, Africa for example, has a high number commits per timezone.\\
@@ -418,11 +475,13 @@ Case2
  A6 & Yes.\\
  \hline
 \end{tabular}
-
+\caption{Task Response 3 - scenarioA, case2}
+\label{tab:table13}
+\end{table}
 
 4.Do highly populated regions/time zones have higher contributor numbers?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & No, again South Asia or China does not show that trend.\\
@@ -434,17 +493,17 @@ Case2
  A6 & Yes.\\
  \hline
 \end{tabular}
-
+\caption{Task Response 4 - scenarioA, case2}
+\label{tab:table14}
+\end{table}
 
 ScenarioB responses
 
-
 Case1
-
 
 1.How does the general trend move towards the number of developers joining each year?	
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Increases. However, there is an increase in the number of developers with lesser experience.\\
@@ -457,11 +516,14 @@ Case1
  A6 & 10.\\
  \hline
 \end{tabular}
+\caption{Task Response 1 - scenarioB, case1}
+\label{tab:table21}
+\end{table}
 
 
 2.Is the number of developers joining a project proportional to the number of developers leaving a project?	
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Yes, the leaving happens in the top part of the graphs (higher experience) and the joining happens in the lower part. Also, these are regular triangles, with almost similar area. Hence the number of developers seems to remain the same, while the average experience shifts to the bottom, year on year.\\
@@ -473,11 +535,14 @@ Case1
  A6 & In most scenarios it is proportional..\\
  \hline
 \end{tabular}
+\caption{Task Response 2 - scenarioB, case1}
+\label{tab:table22}
+\end{table}
 
 
 3.Does the fame of a project lead to it in having more developers join it?	
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & In this case, while "fame" absolutely might not, it is interesting to see why it attracts developers with lesser experience. May be "fame" among a certain "age group".\\
@@ -489,11 +554,13 @@ Case1
  A6 & Yes.\\
  \hline
 \end{tabular}
-
+\caption{Task Response 3 - scenarioB, case1}
+\label{tab:table23}
+\end{table}
 
 4.Do you notice a trend between the conversion and mortality rates in the open source projects shown here?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Conversion happened in the developers with lesser experience, and increasing number of more experienced developers left.\\
@@ -505,14 +572,15 @@ Case1
  A6 & Yes, in general they tend to increase.\\
  \hline
 \end{tabular}
-
+\caption{Task Response 4 - scenarioB, case1}
+\label{tab:table24}
+\end{table}
 
 CAse2
 
-
 1.In any given time zone, does a high number of commits indicate a large number of contributor/author presence?	
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Does not show it.\\
@@ -524,11 +592,13 @@ CAse2
  A6 & Yes.\\
  \hline
 \end{tabular}
-
+\caption{Task Response 1 - scenarioB, case2}
+\label{tab:table31}
+\end{table}
 
 2.Can we sense other trends to attribute to the performance levels at any given time zone like lack of Internet, education access etc. from the knowledge that we possess?	
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Does not show it.\\
@@ -540,11 +610,14 @@ CAse2
  A6 & yes several other factors tend to influence the performance levels.\\
  \hline
 \end{tabular}
+\caption{Task Response 2 - scenarioB, case2}
+\label{tab:table32}
+\end{table}
 
 
 3.Do highly populated regions/time zones have higher contribution rates?	
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Does not show it.\\ \hline
@@ -555,11 +628,13 @@ CAse2
  A6 & Yes.\\
  \hline
 \end{tabular}
-
+\caption{Task Response 3 - scenarioB, case2}
+\label{tab:table33}
+\end{table}
 
 4.Do highly populated regions/time zones have higher contributor numbers?
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{2cm}|p{12cm}| }
  \hline
  A1 & Does not show it.\\
@@ -572,6 +647,9 @@ CAse2
  A6 & Yes.\\
  \hline
 \end{tabular}
+\caption{Task Response 4 - scenarioB, case2}
+\label{tab:table34}
+\end{table}
 
 
 \section{Focus Group Data Analysis}
@@ -624,7 +702,7 @@ Most participants felt that the map visualizations had a lot of potential to sho
 
 \section{Metric Frequency for each Scenario}
 
-
+\begin{table}[H]
 \begin{tabular}{ |p{5cm}|p{3cm}|p{3cm}|  }
  \hline
 Metric & ScenarioA & ScenarioB\\
@@ -638,9 +716,12 @@ Metric & ScenarioA & ScenarioB\\
  No code applied & 9 & 42\\ 
  \hline
 \end{tabular}
+\caption{Evaluation Metric Frequency for each Scenario}
+\label{tab:freq}
+\end{table}
 
 
-The table gives an insight on how both the visualizations stood when it came to evaluating them with the use of the metrics. ScenarioA was highly appreciated for its ease of use, contextual nature, flexibility while scenarioB had one major issue of being too stagnant and low on information. The visualizatons gave little but were not deemed to be completely useless.
+The table \ref{tab:freq} gives an insight on how both the visualizations stood when it came to evaluating them with the the metrics. ScenarioA was highly appreciated for its ease of use, contextual nature and flexibility, while scenarioB had one major issue of being too stagnant and low on information. The visualizations gave little but were not deemed to be completely useless. The participants were of the opinion that if the scenarioB visualizations would be combined with scenarioA visualizations then they might probably add some value to a resarcher's quest.
 
 \begin{figure}[!ht]
 \centering
@@ -648,8 +729,8 @@ The table gives an insight on how both the visualizations stood when it came to 
 \caption{Metric Evaluation}
 \end{figure}
 
-\chapter{Conclusion}
-A large number of developers contribute to open source projects from all over the world and it becomes important to understand their working behaviour to gauge their interest in the project and the growth of the project.Visualizations add a lot of drama to a dataset making it reflect things that the naked eye can't always see. In our case the aim was to make visualizations which would help understand the way developers worked in an open source world to infer the future scope of these projects. As stated by one of the user study participants,"It all depends on what the message is and how it can be conveyed effectively".Both visualizations had their own shares of advantages and disadvantages, but scenarioA stood out plainly because it gave out the message clearly. ScenarioB was not thrown out by our participants, they felt it had potential too, if modified and looked at, along with the visualizations in ScenarioA. 
+\chapter{Summary}
+A large number of developers contribute to open source projects from all over the world and it becomes important to understand their working behaviour to gauge their interest in the project and the growth of the project.Visualizations add a lot of drama to a dataset making it reflect things that the naked eye can't always see. In our case the aim was to make visualizations which would help understand the way developers work/contribute to an open source project to infer the future scope of these projects. As stated by one of the user study participants,"It all depends on what the message is and how it can be conveyed effectively".Both visualizations had their own shares of advantages and disadvantages, but scenarioA stood out plainly because it gave out the message clearly and in multiple ways. ScenarioB was not thrown out by our participants, they felt it had potential too, if modified and looked at, along with the visualizations in ScenarioA.
 
 
 \bibliographystyle{unsrt}

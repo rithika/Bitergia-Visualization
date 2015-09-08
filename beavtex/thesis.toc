@@ -12,15 +12,15 @@
 \contentsline {section}{\numberline {4.2}The Organizations}{16}
 \contentsline {section}{\numberline {4.3}D3.js}{17}
 \contentsline {section}{\numberline {4.4}Bitergia Implementations}{17}
-\contentsline {section}{\numberline {4.5}Our Solutions}{17}
-\contentsline {chapter}{\numberline {5}User study}{23}
-\contentsline {section}{\numberline {5.1}Participants}{23}
-\contentsline {section}{\numberline {5.2}Study Session}{24}
-\contentsline {section}{\numberline {5.3}Evaluation Metrics}{25}
-\contentsline {section}{\numberline {5.4}Code Application}{27}
-\contentsline {chapter}{\numberline {6}Results}{28}
-\contentsline {section}{\numberline {6.1}Task responses}{28}
-\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{40}
-\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{45}
-\contentsline {chapter}{\numberline {7}Conclusion}{47}
-\contentsline {chapter}{Bibliography}{47}
+\contentsline {section}{\numberline {4.5}Our Solutions}{19}
+\contentsline {chapter}{\numberline {5}User study}{24}
+\contentsline {section}{\numberline {5.1}Participants}{24}
+\contentsline {section}{\numberline {5.2}Study Session}{25}
+\contentsline {section}{\numberline {5.3}Evaluation Metrics}{26}
+\contentsline {section}{\numberline {5.4}Code Application}{28}
+\contentsline {chapter}{\numberline {6}Results}{29}
+\contentsline {section}{\numberline {6.1}Task responses}{29}
+\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{43}
+\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{47}
+\contentsline {chapter}{\numberline {7}Summary}{49}
+\contentsline {chapter}{Bibliography}{49}
