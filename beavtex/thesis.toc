@@ -2,21 +2,25 @@
 \contentsline {section}{\numberline {1.1}Why Data Visualizations}{2}
 \contentsline {section}{\numberline {1.2}Why the 5 projects}{3}
 \contentsline {chapter}{\numberline {2}Related Work}{5}
-\contentsline {section}{\numberline {2.1}Geography of Developers}{5}
-\contentsline {section}{\numberline {2.2}Experience of Developers}{6}
+\contentsline {section}{\numberline {2.1}Experience of Developers}{5}
+\contentsline {section}{\numberline {2.2}Geography of Developers}{6}
 \contentsline {chapter}{\numberline {3}Bitergia}{8}
 \contentsline {section}{\numberline {3.1}Services provided}{8}
 \contentsline {section}{\numberline {3.2}Task at hand}{10}
 \contentsline {chapter}{\numberline {4}Methodology}{14}
 \contentsline {section}{\numberline {4.1}Dataset}{14}
 \contentsline {section}{\numberline {4.2}The Organizations}{16}
-\contentsline {section}{\numberline {4.3}D3.js}{16}
-\contentsline {section}{\numberline {4.4}Initial Iterations}{17}
-\contentsline {section}{\numberline {4.5}Final Implementations}{17}
-\contentsline {chapter}{\numberline {5}User study}{18}
-\contentsline {section}{\numberline {5.1}Introduction to the Introduction}{18}
-\contentsline {chapter}{\numberline {6}Results}{19}
-\contentsline {section}{\numberline {6.1}Introduction to the Introduction}{19}
-\contentsline {chapter}{\numberline {7}Conclusion}{20}
-\contentsline {section}{\numberline {7.1}Fin}{20}
-\contentsline {chapter}{Bibliography}{20}
+\contentsline {section}{\numberline {4.3}D3.js}{17}
+\contentsline {section}{\numberline {4.4}Bitergia Implementations}{17}
+\contentsline {section}{\numberline {4.5}Our Solutions}{17}
+\contentsline {chapter}{\numberline {5}User study}{23}
+\contentsline {section}{\numberline {5.1}Participants}{23}
+\contentsline {section}{\numberline {5.2}Study Session}{24}
+\contentsline {section}{\numberline {5.3}Evaluation Metrics}{25}
+\contentsline {section}{\numberline {5.4}Code Application}{27}
+\contentsline {chapter}{\numberline {6}Results}{28}
+\contentsline {section}{\numberline {6.1}Task responses}{28}
+\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{40}
+\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{45}
+\contentsline {chapter}{\numberline {7}Conclusion}{47}
+\contentsline {chapter}{Bibliography}{47}

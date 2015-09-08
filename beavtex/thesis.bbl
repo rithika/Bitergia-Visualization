@@ -56,4 +56,45 @@ Mockus A, Fielding R, Herbsleb J.
 \bibitem{wiki}
 \newblock https://en.wikipedia.org/wiki/Anscombe%27s_quartet
 
+\bibitem{villard}
+Judith A. Villard.
+\newblock Use of Focus Groups: An Effective Tool For Involving People in Measuring Quality and Impact.
+
+\bibitem{patton1990}
+Patton M Q.
+\newblock Qualitative Evaluation and Research Methods.
+
+\bibitem{greenbaum1993}
+Greenbaum T L.
+\newblock The handbook for focus group research.
+
+\bibitem{tufte1983}
+Tufte E R.
+\newblock The Visual Display of Quantitative Information,
+\newblock In {\em Graphics Press, Cheshire, CT}, 1983.
+
+\bibitem{nico2007}
+Nico Marrero.
+\newblock Visualization Metrics: An Overview.
+
+\bibitem{brath1997}
+Richard Brath.
+\newblock Metrics for Effective Information Visualization,
+\newblock In {\em IEEE Symposium on Information
+Visualization}, 1997.
+
+\bibitem{grins2001}
+Grinstein, G., Hoffman, P., Laskowski, S., Pickett, R.
+\newblock Benchmark development for the evaluation of visualization
+for data mining,
+\newblock In {\em . Information Visualization in Data Mining
+and Knowledge Discoverey,}, 2001.
+
+\bibitem{corbin2008}
+J.  Corbin, A.  Strauss.
+\newblock Basics  of  Qualitative  Research:  Techniques  and  
+Procedures  for  Developing  Grounded  Theory,
+\newblock In {\em .SAGE,}, 2008.
+
+
 \end{thebibliography}
