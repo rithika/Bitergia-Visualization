@@ -5,6 +5,19 @@ Robles G , Barahona M Jesus.
 \newblock Geographic Location of Developers at SourceForge,
 \newblock {\em MSR},2006.
 
+\bibitem{osdef}
+The Open Source Definition - Annotated.
+\newblock http://opensource.org/osd-annotated.
+
+\bibitem{pcwr}
+Ten Reasons Open Sourceis Good for Business.
+\newblock http://pcworld.com/article/209891
+
+\bibitem{tum2005}
+David Tuma
+\newblock Open SOurce Software: Opportunities and Challenges
+\newblock In {\em CrossTalk- Journal of Defense Software Engineering}, 2005.
+
 \bibitem{yuri2010}
 Takhteyev Y , Hilts A.
 \newblock Investigating the Geography of Open Source Software through Github,
@@ -12,7 +25,7 @@ Takhteyev Y , Hilts A.
 
 \bibitem{kishida2003}
 Ye Y , Kishida K.
-\newblock Towards an Understanding of the motivation of Open Source Developers.
+\newblock Toward an Understanding of the motivation of Open Source Developers.
 \newblock In {\em ICSE},2003.
 
 \bibitem{seth2010}
@@ -20,12 +33,21 @@ Sethanandha B.D , Massey B, Jones W.
 \newblock Managing open source contributions for software project sustainability,
 \newblock In {\em PICMET}, 2010.
 
+\bibitem{linuslaw}
+Linus Torvalds quoted in
+\newblock The Cathedral and The Bazaar
+
 \bibitem{greg2002}
 Madey G, Freeh V, Tynan R.
 \newblock The Open Source Software Development
 Phenomenon: An analysis based on
 social network theory,
 \newblock In {\em 8th Americas Conference on Information Systems}, 2002.
+
+\bibitem{chawn2012}
+Brenda Chawner
+\newblock Community Matters Most: Factors that Affect Participant Satisfaction with Free/Libre and Open Source Software Projects
+\newblock In {\em ACM}, 2012.
 
 \bibitem{crowston2005}
 Crowston K , Howison J.
@@ -53,6 +75,16 @@ Tuomi I.
 \newblock Evolution of Linux credits file: Methodological challenges and reference data for open source research,
 \newblock In {\em First Monday}, 2004.
 
+\bibitem{igor2014}
+Igor Steinmacher, Marco A. Graciotto Silva, Marco A Gerosa
+\newblock Barriers faced by newcomers to open source projects
+\newblock IN {\em OSS}, 2014.
+
+\bibitem{david2003}
+David P, Watermann A, Arora S.
+\newblock FLOSS-US: The Free/Libre/Open Source Software Survey for 2003,
+\newblock In {\em Stanford Institute for Economic and Policy Research}, 2003.
+
 \bibitem{mockus2002}
 Mockus A, Fielding R, Herbsleb J.
 \newblock Two case studies of open source software development:Apache and Mozilla,
@@ -60,6 +92,10 @@ Mockus A, Fielding R, Herbsleb J.
 
 \bibitem{wiki}
 \newblock https://en.wikipedia.org/wiki/Anscombe%27s_quartet
+
+\bibitem{lfs}
+Linux Foundation Survey
+\newblock https://linuxfoundation.org/publications/linux-foundation/.
 
 \bibitem{villard}
 Judith A. Villard.
@@ -69,6 +105,9 @@ Judith A. Villard.
 Patton M Q.
 \newblock Qualitative Evaluation and Research Methods.
 
+\bibitem{tech}
+\newblock http://techslides.com/time-zone-world-map-with-d3-and-topojson.
+
 \bibitem{greenbaum1993}
 Greenbaum T L.
 \newblock The handbook for focus group research.
@@ -77,6 +116,35 @@ Greenbaum T L.
 Tufte E R.
 \newblock The Visual Display of Quantitative Information,
 \newblock In {\em Graphics Press, Cheshire, CT}, 1983.
+
+\bibitem{rishab2002}
+Ghosh R, Krieger B, Glott R, Robles G.
+\newblock Free/Libre and Open Source Software: Survey and Study,
+\newblock {\em International Institute of Infonomics, University of Maastricht}, 2002.
+
+\bibitem{tarja2013}
+Syeed M, Hammouda I, Systa T.
+\newblock Evolution of Open Source Software Projects: A Systematic Literature Review,
+\newblock In {\em Journal of Software}, 2013.
+
+\bibitem{marc2014}
+Oriol M, Oscar F D, Franch X, Marco J.
+\newblock Assessing Open Source Communities' Health using Service Oriented Computing Concepts
+\newblock In {\em IEEE RCIS}, 2014.
+
+\bibitem{ver2011}
+E. Ververs, R. van Bommel, and S. Jansen.
+\newblock Influences on developer
+participation in the debian software ecosystem,
+\newblock In {\em International Conference on Management of Emergent Digital
+EcoSystems (MEDES), ACM}, 2011.
+
+
+\bibitem{gno}
+Goeminne M, Mens T.
+\newblock A framework for analysing and visualizing open source software ecosystems,
+\newblock In {\em 13th International Workshop on Principles on Software Evolution, ACM}, 2010.
+
 
 \bibitem{nico2007}
 Nico Marrero.
@@ -92,7 +160,7 @@ Visualization}, 1997.
 Grinstein, G., Hoffman, P., Laskowski, S., Pickett, R.
 \newblock Benchmark development for the evaluation of visualization
 for data mining,
-\newblock In {\em . Information Visualization in Data Mining
+\newblock In {\em Information Visualization in Data Mining
 and Knowledge Discoverey}, 2001.
 
 \bibitem{corbin2008}
@@ -101,5 +169,28 @@ J.  Corbin, A.  Strauss.
 Procedures  for  Developing  Grounded  Theory,
 \newblock In {\em SAGE}, 2008.
 
+\bibitem{bit}
+\newblock Bitergia.
+\newblock https://www.bitergia.com/
+
+\bibitem{eclipse}
+\newblock Eclipse Foundation.
+\newblock https://www.eclipse.org/
+
+\bibitem{openstack}
+\newblock Openstack Foundation.
+\newblock https://www.openstack.org/foundation/
+
+\bibitem{puppet}
+\newblock Puppet Labs.
+\newblock https://puppetlabs.com/
+
+\bibitem{rdo}
+\newblock Redhat RDO.
+\newblock https://www.rdoproject.org/
+
+\bibitem{apache}
+\newblock Apache Cloudstack.
+\newblock https://cloudstack.apache.org/
 
 \end{thebibliography}
