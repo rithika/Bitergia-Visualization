@@ -36,9 +36,9 @@ My dream of pursuing a Master's degree would not have been fulfilled if not for 
 \mainmatter
 
 \chapter{Introduction}
-The software industry has undergone a lot of changes over the years and one such important change was the advent of Open source software. Open source software is a type of software development which is volunteer driven\cite{ghosh2005} and the code base is usually made available for any person to modify, edit and redistribute\cite{osdef}. Open source software is being heavily relied on and used today because of, one its quality.Would you prefer a software written by a bunch of developers or software written and improvised by thousands of developers? It follows the principle of "Given enough eyeballs, all bugs are shallow"\cite{linuslaw} where it is found that in open source software as a large base of developers contribute to the code base, this would only lead to a large variety of features, huge support groups and enhanced products\cite{pcwr}. Second would be its flexibility where in, the users can tweak any part of the functionality to match their needs and this is because the code is open and available. Third would be its auditability where one can believe the claims made by the authors about issues like security, freedom, flexibility etc which is highly lacking in closed source software. Next would be the large support base which is available in the form of documentation, forums, mailing lists, forges, wiki, live chats and so on and with so many options available a user can never be holding onto to a problem ling enough. With a plethora of such important features, the need to use open source software has hence being going uphill.
+The software industry has undergone a lot of changes over the years and one such important change was the advent of Open source software. Open source software is a type of software development which is volunteer driven\cite{ghosh2005} and the code base is usually made available for any person to modify, edit and redistribute\cite{osdef}. Open source software is being heavily relied on and used today because of, one its quality. Would you prefer a software written by a bunch of developers or software written and improvised by thousands of developers? It follows the principle of "Given enough eyeballs, all bugs are shallow"\cite{linuslaw} where it is found that in open source software as a large base of developers contribute to the code base, this would only lead to a large variety of features, huge support groups and enhanced products\cite{pcwr}. Second would be its flexibility where in, the users can tweak any part of the functionality to match their needs and this is because the code is open and available\cite{pcwr}. Third would be its auditability where one can believe the claims made by the authors about issues like security, freedom, flexibility etc which is highly lacking in closed source software\cite{pcwr}. Next would be the large support base which is available in the form of documentation, forums, mailing lists, forges, wiki, live chats and so on and with so many options available a user can never be holding onto to a problem ling enough. With a plethora of such important features, the need to use open source software has hence being going uphill.
 
-Managing any software comes with its own set of challenges and open source software is no different.Having mentioned its advantages, handling them and keeping to the standards is a big task. With the code base made available to all, it brings out issues like maintaining coding standards, peer review processes, skillsets, documentation etc\cite{tum2005}. The fact that its volunteer based brings out issues like community management, fairness and equity among the developers. Open source software relies heavily on its community for its growth and development\cite{seth2010} making co-ordination among them a foremost point of importance. The OSS community usually has a lot of developers collaborate from all over the world who work voluntarily to produce code and support the software in general. Their motivations and ethics for this have always been open for studies\cite{greg2002}. There are also other reasons that define if a developer would want to contribute to the project in the first place. Some such reasons would include their education levels, facilities available, time commitment, the need to use the project, code interaction, community support, management and governance to name a few\cite{chawn2012}. Unlike traditional softwares, as open source software has a wide spread developer/volunteer group, the success or failure hence depends strongly on its community as they can make or break the project. Their motivations and interests are often the reason sometimes for the birth of a project. A very motivational discovery in this area was the onion model which clearly divided the developer lifecycle into 7 layers, with each layer moving inwards, showing the level of involvement of the developers. The outer most layer is considered as the starting point for a new developer after which he slowly transitions to higher points of responsibilities if he continues to stay with the organization, with the final stage being becoming a part of the core community and a regular contributor\cite{kishida2003}.
+Managing any software comes with its own set of challenges and open source software is no different. Having mentioned its advantages, handling them and keeping to the standards is a big task. With the code base made available to all, it brings out issues like maintaining coding standards, peer review processes, skillsets, documentation etc\cite{tum2005}. The fact that its volunteer based brings out issues like community management, fairness and equity among the developers. Open source software relies heavily on its community for its growth and development\cite{seth2010} making co-ordination among them a foremost point of importance. The OSS community usually has a lot of developers collaborate from all over the world who work voluntarily to produce code and support the software in general. Their motivations and ethics for this have always been open for studies\cite{greg2002}. There are also other reasons that define if a developer would want to contribute to the project in the first place. Some such reasons would include their education levels, facilities available, time commitment, the need to use the project, code interaction, community support, management and governance to name a few\cite{chawn2012}. Unlike traditional softwares, as open source software has a wide spread developer/volunteer group, the success or failure hence depends strongly on its community as they can make or break the project. Their motivations and interests are often the reason sometimes for the birth of a project. A very motivational discovery in this area was the onion model which clearly divided the developer lifecycle into 7 layers, with each layer moving inwards, showing the level of involvement of the developers. The outer most layer is considered as the starting point for a new developer after which he slowly transitions to higher points of responsibilities if he continues to stay with the organization, with the final stage being becoming a part of the core community and a regular contributor\cite{kishida2003}.
 
 \begin{figure}[H]
 \centering
@@ -189,7 +189,7 @@ As the visualizations needed flexibility the most ideal tool in hand was D3.js. 
 \section{Experimental Designs}
 
 \subsection{Bitergia's Implementations}
-We first go onto view the implemetations done by team Bitergia to analyse the data set in hand. Figure \ref{fig:devExp} is used to show the experience of developers and makes use of a bar chart. The y axis is age in quarters for long a developer has stayed and the x axis is the number of developers.
+We first go onto view the implemetations done by team Bitergia to analyse the data set in hand. Figure \ref{fig:devExp} is used to show the experience of developers and makes use of a bar chart. The y axis is age in quarters showing the duration that a developer has stayed/contributed to the project and the x axis is the number of developers.
 
 \begin{figure}[H]
 \begin{center}
@@ -210,7 +210,7 @@ Figure \ref{fig:devWork} is used to view the number of messages incoming from di
 \end{figure}
 
 \subsection{Our Implementations}
-Figure \ref{fig:devTurn} is a bar grouped bar chart which has two main data sets - one column shows the number of developers who join the project each year i.e New developers and the second column shows the number of developers that are still a part of the project each year i.e Established developers.
+Figure \ref{fig:devTurn} is a grouped bar chart which has two main data sets - one column shows the number of developers who join the project each year i.e New developers and the second column shows the number of developers that are still a part of the project each year i.e Established developers.
 
 \begin{figure}[H]
 \centering
@@ -320,26 +320,31 @@ Participant Code Name & Degree and Major & Age & Gender\\
 The participants on arrival were given a nametag with their code names and scenario numbers. Three of the participants were asked to look at the visualizations done by Bitergia and three of them were given the visualizations done by us. The goal was to make the participants use both the visualizations and then have a discussion about their effectiveness. The participants were not told beforehand which visualizations they would be handling first. After having completed the tasks with one scenario, the participants then swapped and completed the same tasks with the second scenario. This was a within group study as all participants performed both tasks. This took up almost 40 minutes of the session. Once done, the participants were then led to a discussion session where they were asked some questions with regard to the visualizations to bring out their opinions and views about each of the implementations. The questions that were posed basically tried to cover various metrics which would be used to evaluate the visualizations.They were mostly open ended and covered the following topics: a)How close to context were the visualizations, b)were they easy to understand and use, c)were meaningful outcomes being drawn, d)how they dealt with missing data etc. The discussion was facilitated by a researcher and the participants were probed from time to time in case they deviated from the discussion path. All the participants were very enthusiastic and brought out some very interesting points during the course of the discussion. The session lasted for about 2 hours and the collected results were then analysed by means of thematic coding.
 
 \section{Evaluation Metrics}
-The evaluation of visualizations has always been subject to a lot of research. The oldest or first ever possible research done in this area was by Tufte in 1983\cite{tufte1983}. Since then lot of researchers have tried their best to formulate a set of guidelines for evaluation yet no concrete measurable metrics are available today to say that yes this visualization is the best. In 2007, Nico Marrero wrote a paper which spoke about possible metrics derived by various researchers, to evalaute the effectiveness and usability of visualizations\cite{nico2007}. These metrics were divided into three main categories;Mathematical Metrics, User Centric Metrics and Effectiveness Metrics. Though not a high standard and highly accepted benchmark, it still has some credibility when it talks about visualization effcetiveness. From this list we picked 2 metrics under each category which were close to our expectations to define the usability of the visualizations.
+The evaluation of visualizations has always been subject to a lot of research. The oldest or first ever possible research done in this area was by Tufte in 1983\cite{tufte1983}. Since then lot of researchers have tried their best to formulate a set of guidelines for evaluation yet no concrete measurable metrics are available today to say that yes this visualization is the best. In 2007, Nico Marrero wrote a paper which spoke about possible metrics derived by various researchers, to evaluate the effectiveness and usability of visualizations\cite{nico2007}. These metrics were divided into three main categories;Mathematical Metrics, User Centric Metrics and Effectiveness Metrics. Though not a high standard and highly accepted benchmark, it still has some credibility when it talks about visualization effectiveness. From this list we picked 2 metrics under each category which were close to our expectations to define the usability of the visualizations.
 
+\subsection{Mathematical Metrics}
 
-\textbf{Mathematical Metrics}
+\begin{enumerate}
+\item Reference Context: A visualization needs to provide a context in order to be comprehendable from most viewpoints. This is hence the number of visible data points in any given visualization with reference to a context\cite{brath1997}.
 
-1.Reference Context: A visualization needs to provide a context in order to be comprehendable from most viewpoints. This is hence the number of visible data points in any given visualization with reference to a context\cite{brath1997}.
+\item Number of data points and data density: This metric was defined by Tufte when he assumed that the more the amount of data made available per square centimeter of screen size, the more effective is the visualization. The number of data points here mean the discrete number of data sets/values present on the screen at any point and data density is the number of points/pixels on the screen excluding the borders and menu options. It is said that visualizations which cannot show atleast 500 data points, are not found to effective\cite{brath1997}. But this is not a fixed lower bound and can vary depending on the use of the visualization. The same goes for the upper bound, there could be visualizations which have around 100,000 data points and be considered effective and there could be visualizations with just 3000 data points and still be deemed as complex\cite{brath1997}.
+\end{enumerate}
 
-2.Number of data points and data density: This metric was defined by Tufte when he assumed that the more the amount of data made available per square centimeter of screen size, the more effective is the visualization. The number of data points here mean the discrete number of data sets/values present on the screen at any point and data density is the number of points/pixels on the screen excluding the borders and menu options. It is said that visualizations which cannot show atleast 500 data points, are not found to effective\cite{brath1997}. But this is not a fixed lower bound and can vary depending on the use of the visualization. The same goes for the upper bound, there could be visualizations which have around 100,000 data points and be considered effective and there could be visualizations with just 3000 data points and still be deemed as complex\cite{brath1997}.
+\subsection{User Centric Metrics}
 
-\textbf{User Centric Metrics}
+\begin{enumerate}
+\item Identify Clusters: The ability to group similar data points for better understanding\cite{grins2001}.
 
-3.Identify Clusters: The ability to group similar data points for better understanding\cite{grins2001}.
+\item See all features and data: The visualization should be able to show all of its underlying features and data sets without any occlusion\cite{grins2001}.
+\end{enumerate}
 
-4.See all features and data: The visualization should be able to show all of its underlying features and data sets without any occlusion\cite{grins2001}.
+\subsection{Effectiveness Metrics}
 
-\textbf{Effectiveness Metrics}
+\begin{enumerate}
+\item Dealing with uncertain,missing and dirty data: How effectively can a visualization handle missing and dirty data and bring it across aesthetically to the user\cite{grins2001}.
 
-5.Dealing with uncertain,missing and dirty data: How effectively can a visualization handle missing and dirty data and bring it across aesthetically to the user\cite{grins2001}.
-
-6.Flexibility of visualization: Visualizations need to have the ability to reach the upper bounds of data density or feature listing without becoming too complex to view\cite{grins2001}.
+\item Flexibility of visualization: Visualizations need to have the ability to reach the upper bounds of data density or feature listing without becoming too complex to view\cite{grins2001}.
+\end{enumerate}
 
 \section{Code Application}
 Each codeset was applied to the chunked transcriptions of the focus study data. Visualization Effectiveness related  codes  were  applied borrowing methods from  grounded theory\cite{corbin2008}, but using pre-­defined codes. Two researchers independently coded all the responses for each scenario and reached a good agreement(Cohen’s  Kappa  coeffecient  =  0.718 for scenarioA and Cohen’s  Kappa  coeffecient  =  0.778 for scenarioB).
@@ -348,7 +353,7 @@ Each codeset was applied to the chunked transcriptions of the focus study data. 
 In this section we show the results from the tasks undertaken by the participants and then go on to talk about the how the codes were applied to the focus group questions to see how well the scenario's fair when evaluated with regard to the metrics. The questions were all open ended which gave a lot of scope to gain constructive feedback. Here scenarioA refers to our implementations and scenarioB refers to Bitergia's implementation. One thing to be noted is that this was a formative study and was performed to find if we were heading in the right direction and not to gain consensus or state a solution to be better over the other. We were looking at gathering user comments and suggestions for improvement.
 
 \section{Task Performance}
-The participants were all given around 3-4 questions in each case for both the scenarios and they had to answer them with the help of the visualizations. Upon completion of the tasks, they told the researcher that they had guessed a lot when it came to answering the questions in scenarioB. They had done it as they could not take the help of those visualizations to answer the questions completely. This raises questions on the validity of their answers and value of their insights. Below is the summarized result of the solutions given to each question for both scenarios. Find complete responses in the Appendix for these questions.
+The participants were all given around 3-4 questions in each case for both the scenarios and they had to answer them with the help of the visualizations. Upon completion of the tasks, they told the researcher that they had guessed a lot when it came to answering the questions in scenarioB. They had done it as they could not take the help of those visualizations to answer the questions completely. This raised questions on the validity of their answers and value of their insights. Below is the summarized result of the solutions given to each question for both scenarios. Find complete responses in the Appendix for these questions.
 
 \subsection{Case 1 response summary}
 
@@ -447,10 +452,11 @@ Most participants felt that the map visualizations had a lot of potential to sho
 \textbf{Flexibility of visualizations}
 
 {\em "You can use colors for commit frequency and other metric you can show with thickness like internet bandwidth in countries, so nothing overlaps, the map visualizations can handle this well."} - A1
-
 \end{enumerate}
-
 \section{Metric Frequency for each Scenario}
+
+
+The table \ref{tab:freq} gives an insight on how both the visualizations stood when it came to evaluating them with the the metrics. ScenarioA was highly appreciated for its ease of use, contextual nature and flexibility, while scenarioB had one major issue of being too stagnant and low on information. The visualizations gave little but were not deemed to be completely useless. The participants were of the opinion that if the scenarioB visualizations would be combined with scenarioA visualizations then they might probably add some value to a resarcher's quest.
 
 \begin{table}[H]
 \centering
@@ -470,9 +476,6 @@ Metric & ScenarioA & ScenarioB\\
 \caption{Evaluation Metric Frequency for each Scenario}
 \label{tab:freq}
 \end{table}
-
-
-The table \ref{tab:freq} gives an insight on how both the visualizations stood when it came to evaluating them with the the metrics. ScenarioA was highly appreciated for its ease of use, contextual nature and flexibility, while scenarioB had one major issue of being too stagnant and low on information. The visualizations gave little but were not deemed to be completely useless. The participants were of the opinion that if the scenarioB visualizations would be combined with scenarioA visualizations then they might probably add some value to a resarcher's quest.
 
 \begin{figure}[!ht]
 \centering
