@@ -8,7 +8,7 @@
 \contentsline {section}{\numberline {3.2}Task at hand}{12}
 \contentsline {chapter}{\numberline {4}Methodology}{16}
 \contentsline {section}{\numberline {4.1}The Organizations}{16}
-\contentsline {section}{\numberline {4.2}Why the 5 projects}{17}
+\contentsline {section}{\numberline {4.2}Why the 5 projects?}{17}
 \contentsline {section}{\numberline {4.3}Dataset}{18}
 \contentsline {section}{\numberline {4.4}D3.js}{19}
 \contentsline {section}{\numberline {4.5}Experimental Designs}{20}
