@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.11)  10 SEP 2015 11:05
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.11)  10 SEP 2015 12:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -480,11 +480,6 @@ Overfull \hbox (29.17235pt too wide) in paragraph at lines 311--323
  []
 
 [31] [32] [33]
-Overfull \hbox (47.2345pt too wide) in paragraph at lines 346--347
-[]\OT1/cmr/m/n/12 Identify Clus-ters: The abil-ity to group sim-i-lar data poin
-ts for bet-ter understanding[[]]. 
- []
-
 Missing character: There is no Â in font cmr12!
 Missing character: There is no ­ in font cmr12!
 Missing character: There is no â in font cmr12!
@@ -493,7 +488,7 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
-[34] [35]
+ [34] [35]
 Chapter 6.
 [36
 
@@ -612,16 +607,16 @@ LaTeX Warning: There were multiply-defined labels.
 Here is how much of TeX's memory you used:
  3224 strings out of 494985
  49396 string characters out of 6180356
- 113475 words of memory out of 5000000
+ 112475 words of memory out of 5000000
  6371 multiletter control sequences out of 15000+600000
  7434 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 37i,9n,38p,2286b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,38p,2292b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (76 pages, 1818750 bytes).
+Output written on thesis.pdf (76 pages, 1818790 bytes).
 PDF statistics:
  302 PDF objects out of 1000 (max. 8388607)
  183 compressed objects within 2 object streams
