@@ -1,5 +1,5 @@
 \contentsline {chapter}{\numberline {1}Introduction}{1}
-\contentsline {section}{\numberline {1.1}Why Data Visualizations}{4}
+\contentsline {section}{\numberline {1.1}Why Data Visualizations?}{4}
 \contentsline {chapter}{\numberline {2}Related Work}{5}
 \contentsline {section}{\numberline {2.1}Experience of Developers}{7}
 \contentsline {section}{\numberline {2.2}Geography of Developers}{8}
