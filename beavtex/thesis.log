@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.11)  9 SEP 2015 22:25
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2015.5.11)  10 SEP 2015 11:05
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -119,46 +119,65 @@ Type  H <return>  for immediate help.
 l.91 }
       
 ? 
-) (./thesis.aux
+) (/usr/share/texlive/texmf-dist/tex/latex/dirtytalk/dirtytalk.sty
+Package: dirtytalk 2010/11/21 A package making "quoting" easier
+
+(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+
+(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+\c@dirtytalk@qdepth=\count95
+)
+(./thesis.aux
 
 LaTeX Warning: Label `tab:table1' multiply defined.
 
 )
 \openout1 = `thesis.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 32.
-LaTeX Font Info:    ... okay on input line 32.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 33.
+LaTeX Font Info:    ... okay on input line 33.
  (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count95
+\scratchcounter=\count96
 \scratchdimen=\dimen115
 \scratchbox=\box31
-\nofMPsegments=\count96
-\nofMParguments=\count97
+\nofMPsegments=\count97
+\nofMParguments=\count98
 \everyMPshowfont=\toks19
-\MPscratchCnt=\count98
+\MPscratchCnt=\count99
 \MPscratchDim=\dimen116
-\MPnumerator=\count99
-\makeMPintoPDFobject=\count100
+\MPnumerator=\count100
+\makeMPintoPDFobject=\count101
 \everyMPtoPDFconversion=\toks20
 ) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
-Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
-Package ifluatex Info: LuaTeX not detected.
-)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
@@ -177,19 +196,6 @@ Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
-Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
-Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
-
-(/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
-Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
-Package etexcmds Info: Could not find \expanded.
-(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
-(etexcmds)             that some package has redefined \expanded.
-(etexcmds)             In the latter case, load this package earlier.
-)))
 Package grfext Info: Graphics extension search list:
 (grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPE
 G,.JBIG2,.JB2,.eps]
@@ -207,18 +213,18 @@ Package caption Info: End \AtBeginDocument code.
 
 ] [2{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [3]
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <12> on input line 34.
+(Font)              <12> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <8> on input line 34.
+(Font)              <8> on input line 35.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <6> on input line 34.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 34.
+(Font)              <6> on input line 35.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 35.
 
 (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 34.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 35.
  [4
 
 ] [5
@@ -245,7 +251,14 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 $[]$ 
  []
 
-[9] (./thesis.lof)
+[9] (./thesis.lof
+Overfull \hbox (2.61108pt too wide) has occurred while \output is active
+$[]$ 
+ []
+
+[10
+
+])
 \tf@lof=\write4
 \openout4 = `thesis.lof'.
 
@@ -254,9 +267,7 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 $[]$ 
  []
 
-[10
-
-] (./thesis.lot)
+[11] (./thesis.lot)
 \tf@lot=\write5
 \openout5 = `thesis.lot'.
 
@@ -265,7 +276,7 @@ Overfull \hbox (2.61108pt too wide) has occurred while \output is active
 $[]$ 
  []
 
-[11
+[12
 
 ] (./thesis.loap)
 \tf@loap=\write6
@@ -287,11 +298,11 @@ Chapter 1.
 
 
 
-] [2] <images/onion.png, id=46, 431.6125pt x 197.73875pt>
+] [2] <images/onion.png, id=49, 431.6125pt x 197.73875pt>
 File: images/onion.png Graphic file (type png)
 
 <use images/onion.png>
-Package pdftex.def Info: images/onion.png used on input line 52.
+Package pdftex.def Info: images/onion.png used on input line 53.
 (pdftex.def)             Requested size: 256.0748pt x 117.3226pt.
  [3 <./images/onion.png>] [4]
 Chapter 2.
@@ -299,173 +310,181 @@ Chapter 2.
 
 ] [6] [7] [8] [9]
 Chapter 3.
-<images/bitergia.jpg, id=70, 602.25pt x 301.125pt>
+<images/bitergia.jpg, id=73, 602.25pt x 301.125pt>
 File: images/bitergia.jpg Graphic file (type jpg)
  <use images/bitergia.jpg>
-Package pdftex.def Info: images/bitergia.jpg used on input line 93.
-(pdftex.def)             Requested size: 256.0748pt x 128.04305pt.
+Package pdftex.def Info: images/bitergia.jpg used on input line 94.
+(pdftex.def)             Requested size: 398.33858pt x 199.17502pt.
 
 [10
 
-] <images/apache.png, id=75, 1300.86pt x 663.47874pt>
+] <images/apache.png, id=78, 1300.86pt x 663.47874pt>
 File: images/apache.png Graphic file (type png)
 
 <use images/apache.png>
-Package pdftex.def Info: images/apache.png used on input line 101.
+Package pdftex.def Info: images/apache.png used on input line 102.
 (pdftex.def)             Requested size: 341.43306pt x 174.14046pt.
- <images/eclipse.png, id=76, 1302.8675pt x 666.49pt>
+ [11 <./images/bitergia.jpg>]
+<images/eclipse.png, id=82, 1302.8675pt x 666.49pt>
 File: images/eclipse.png Graphic file (type png)
-
-<use images/eclipse.png>
-Package pdftex.def Info: images/eclipse.png used on input line 107.
+ <use images/eclipse.png>
+Package pdftex.def Info: images/eclipse.png used on input line 108.
 (pdftex.def)             Requested size: 341.43306pt x 174.65623pt.
- [11 <./images/bitergia.jpg> <./images/apache.png>]
-[12 <./images/eclipse.png>]
-<images/age2.png, id=83, 687.56876pt x 541.02126pt>
+
+[12 <./images/apache.png> <./images/eclipse.png>]
+<images/age2.png, id=86, 687.56876pt x 541.02126pt>
 File: images/age2.png Graphic file (type png)
  <use images/age2.png>
-Package pdftex.def Info: images/age2.png used on input line 120.
+Package pdftex.def Info: images/age2.png used on input line 121.
 (pdftex.def)             Requested size: 256.0748pt x 201.49557pt.
 
-<images/age1.png, id=84, 819.06pt x 536.0025pt>
+<images/age1.png, id=87, 819.06pt x 536.0025pt>
 File: images/age1.png Graphic file (type png)
  <use images/age1.png>
-Package pdftex.def Info: images/age1.png used on input line 126.
-(pdftex.def)             Requested size: 256.0748pt x 167.58215pt.
- [13 <./images/age2.png> <./images/age1.png>]
-<images/work1.png, id=88, 643.40375pt x 421.575pt>
+Package pdftex.def Info: images/age1.png used on input line 127.
+(pdftex.def)             Requested size: 369.88582pt x 242.05766pt.
+ [13 <./images/age2.png>] [14 <./images/age1.png>]
+<images/work1.png, id=95, 643.40375pt x 421.575pt>
 File: images/work1.png Graphic file (type png)
  <use images/work1.png>
-Package pdftex.def Info: images/work1.png used on input line 138.
+Package pdftex.def Info: images/work1.png used on input line 139.
 (pdftex.def)             Requested size: 256.0748pt x 167.79076pt.
 
-<images/work2.png, id=89, 789.95125pt x 470.75874pt>
+<images/work2.png, id=96, 789.95125pt x 470.75874pt>
 File: images/work2.png Graphic file (type png)
  <use images/work2.png>
-Package pdftex.def Info: images/work2.png used on input line 144.
+Package pdftex.def Info: images/work2.png used on input line 145.
 (pdftex.def)             Requested size: 256.0748pt x 152.5997pt.
 
-[14] [15 <./images/work1.png> <./images/work2.png>]
+[15 <./images/work1.png>] [16 <./images/work2.png>]
 Chapter 4.
-[16
+[17
 
-] [17] <images/pop1.jpg, id=103, 834.11626pt x 554.07pt>
-File: images/pop1.jpg Graphic file (type jpg)
+] [18] <images/pop1.png, id=109, 978.65625pt x 645.41125pt>
+File: images/pop1.png Graphic file (type png)
 
-<use images/pop1.jpg>
-Package pdftex.def Info: images/pop1.jpg used on input line 185.
-(pdftex.def)             Requested size: 256.0748pt x 170.10286pt.
- [18 <./images/pop1.jpg>] [19]
-<images/image11.PNG, id=110, 340.27126pt x 412.54124pt>
+<use images/pop1.png>
+Package pdftex.def Info: images/pop1.png used on input line 186.
+(pdftex.def)             Requested size: 455.24965pt x 284.52348pt.
+
+Overfull \hbox (36.08344pt too wide) in paragraph at lines 186--187
+ [][] 
+ []
+
+[19] [20 <./images/pop1.png>]
+<images/image11.PNG, id=117, 340.27126pt x 412.54124pt>
 File: images/image11.PNG Graphic file (type png)
 
 <use images/image11.PNG>
-Package pdftex.def Info: images/image11.PNG used on input line 203.
-(pdftex.def)             Requested size: 170.71652pt x 206.97514pt.
- [20 <./images/image11.PNG>]
-<images/image12.PNG, id=117, 514.17094pt x 414.04688pt>
+Package pdftex.def Info: images/image11.PNG used on input line 204.
+(pdftex.def)             Requested size: 256.0748pt x 310.4753pt.
+ [21]
+<images/image12.PNG, id=122, 514.17094pt x 414.04688pt>
 File: images/image12.PNG Graphic file (type png)
 
 <use images/image12.PNG>
-Package pdftex.def Info: images/image12.PNG used on input line 213.
+Package pdftex.def Info: images/image12.PNG used on input line 214.
 (pdftex.def)             Requested size: 256.0748pt x 206.21423pt.
-
-<images/image1.PNG, id=118, 983.92593pt x 258.21469pt>
+ [22 <./images/image11.PNG>]
+<images/image1.PNG, id=127, 983.92593pt x 258.21469pt>
 File: images/image1.PNG Graphic file (type png)
  <use images/image1.PNG>
-Package pdftex.def Info: images/image1.PNG used on input line 224.
-(pdftex.def)             Requested size: 312.97104pt x 142.26672pt.
+Package pdftex.def Info: images/image1.PNG used on input line 225.
+(pdftex.def)             Requested size: 369.88715pt x 170.72165pt.
 
-[21 <./images/image12.PNG>]
-<images/image2.PNG, id=123, 983.92593pt x 271.0125pt>
+[23 <./images/image12.PNG>]
+<images/image2.PNG, id=132, 1206.00563pt x 300.3722pt>
 File: images/image2.PNG Graphic file (type png)
  <use images/image2.PNG>
-Package pdftex.def Info: images/image2.PNG used on input line 233.
-(pdftex.def)             Requested size: 312.97104pt x 142.26714pt.
+Package pdftex.def Info: images/image2.PNG used on input line 234.
+(pdftex.def)             Requested size: 483.68185pt x 199.17665pt.
 
-<images/image3.PNG, id=124, 712.91344pt x 364.36125pt>
+Overfull \hbox (64.51564pt too wide) in paragraph at lines 234--235
+ [][] 
+ []
+
+<images/image3.PNG, id=133, 712.91344pt x 364.36125pt>
 File: images/image3.PNG Graphic file (type png)
  <use images/image3.PNG>
-Package pdftex.def Info: images/image3.PNG used on input line 242.
-(pdftex.def)             Requested size: 312.9758pt x 142.26154pt.
+Package pdftex.def Info: images/image3.PNG used on input line 243.
+(pdftex.def)             Requested size: 369.8795pt x 170.71606pt.
 
-[22 <./images/image1.PNG> <./images/image2.PNG>]
-<images/image4.PNG, id=130, 682.04813pt x 317.68687pt>
+[24 <./images/image1.PNG> <./images/image2.PNG>]
+<images/image4.PNG, id=139, 682.04813pt x 317.68687pt>
 File: images/image4.PNG Graphic file (type png)
  <use images/image4.PNG>
-Package pdftex.def Info: images/image4.PNG used on input line 251.
-(pdftex.def)             Requested size: 312.98622pt x 142.26941pt.
+Package pdftex.def Info: images/image4.PNG used on input line 252.
+(pdftex.def)             Requested size: 369.8928pt x 170.71942pt.
 
-<images/image5.PNG, id=131, 650.43pt x 307.90031pt>
+[25 <./images/image3.PNG>] <images/image5.PNG, id=145, 650.43pt x 307.90031pt>
 File: images/image5.PNG Graphic file (type png)
- <use images/image5.PNG>
-Package pdftex.def Info: images/image5.PNG used on input line 258.
-(pdftex.def)             Requested size: 312.98691pt x 142.26541pt.
 
-[23 <./images/image3.PNG> <./images/image4.PNG>]
-<images/image6.PNG, id=137, 677.53125pt x 308.65312pt>
+<use images/image5.PNG>
+Package pdftex.def Info: images/image5.PNG used on input line 259.
+(pdftex.def)             Requested size: 369.89542pt x 170.71754pt.
+ <images/image6.PNG, id=146, 677.53125pt x 308.65312pt>
 File: images/image6.PNG Graphic file (type png)
- <use images/image6.PNG>
-Package pdftex.def Info: images/image6.PNG used on input line 267.
-(pdftex.def)             Requested size: 312.99146pt x 142.26472pt.
 
-<images/image7.PNG, id=138, 661.72218pt x 321.45094pt>
+<use images/image6.PNG>
+Package pdftex.def Info: images/image6.PNG used on input line 268.
+(pdftex.def)             Requested size: 369.89336pt x 170.7205pt.
+ [26 <./images/image4.PNG> <./images/image5.PNG>]
+<images/image7.PNG, id=152, 661.72218pt x 321.45094pt>
 File: images/image7.PNG Graphic file (type png)
  <use images/image7.PNG>
-Package pdftex.def Info: images/image7.PNG used on input line 274.
-(pdftex.def)             Requested size: 312.9784pt x 142.26778pt.
+Package pdftex.def Info: images/image7.PNG used on input line 275.
+(pdftex.def)             Requested size: 369.88539pt x 170.72133pt.
 
-[24 <./images/image5.PNG> <./images/image6.PNG>]
-<images/image8.PNG, id=144, 683.55376pt x 311.66437pt>
+<images/image8.PNG, id=153, 683.55376pt x 311.66437pt>
 File: images/image8.PNG Graphic file (type png)
  <use images/image8.PNG>
-Package pdftex.def Info: images/image8.PNG used on input line 283.
-(pdftex.def)             Requested size: 312.98875pt x 142.26404pt.
+Package pdftex.def Info: images/image8.PNG used on input line 284.
+(pdftex.def)             Requested size: 369.8958pt x 170.71686pt.
 
-<images/image9.PNG, id=145, 686.565pt x 318.43968pt>
+[27 <./images/image6.PNG> <./images/image7.PNG>]
+<images/image9.PNG, id=159, 686.565pt x 318.43968pt>
 File: images/image9.PNG Graphic file (type png)
  <use images/image9.PNG>
-Package pdftex.def Info: images/image9.PNG used on input line 290.
-(pdftex.def)             Requested size: 312.97423pt x 142.26157pt.
+Package pdftex.def Info: images/image9.PNG used on input line 291.
+(pdftex.def)             Requested size: 369.88054pt x 170.71582pt.
 
-[25 <./images/image7.PNG> <./images/image8.PNG>]
-<images/image10.PNG, id=151, 665.48625pt x 301.8778pt>
+<images/image10.PNG, id=160, 665.48625pt x 301.8778pt>
 File: images/image10.PNG Graphic file (type png)
 
 <use images/image10.PNG>
-Package pdftex.def Info: images/image10.PNG used on input line 297.
-(pdftex.def)             Requested size: 312.98166pt x 142.2603pt.
- [26 <./images/image9.PNG> <./images/image10.PNG>]
+Package pdftex.def Info: images/image10.PNG used on input line 298.
+(pdftex.def)             Requested size: 369.88742pt x 170.71327pt.
+ [28 <./images/image8.PNG> <./images/image9.PNG>]
+[29 <./images/image10.PNG>]
 Chapter 5.
-[27
+[30
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 313--313
 []\OT1/cmr/m/n/12 Participant
  []
 
 
-Underfull \hbox (badness 3861) in paragraph at lines 316--316
+Underfull \hbox (badness 3861) in paragraph at lines 317--317
 []\OT1/cmr/m/n/12 PhD, Botany and Plant
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 319--319
+Underfull \hbox (badness 10000) in paragraph at lines 320--320
 []\OT1/cmr/m/n/12 Masters, Elec-tri-cal and
  []
 
 
-Overfull \hbox (29.17235pt too wide) in paragraph at lines 310--322
+Overfull \hbox (29.17235pt too wide) in paragraph at lines 311--323
  [][] 
  []
 
-[28] [29]
-Overfull \hbox (47.2345pt too wide) in paragraph at lines 343--344
+[31] [32] [33]
+Overfull \hbox (47.2345pt too wide) in paragraph at lines 346--347
 []\OT1/cmr/m/n/12 Identify Clus-ters: The abil-ity to group sim-i-lar data poin
 ts for bet-ter understanding[[]]. 
  []
 
-[30]
 Missing character: There is no Â in font cmr12!
 Missing character: There is no ­ in font cmr12!
 Missing character: There is no â in font cmr12!
@@ -474,24 +493,24 @@ Missing character: There is no ™ in font cmr12!
 Missing character: There is no â in font cmr12!
 Missing character: There is no € in font cmr12!
 Missing character: There is no ™ in font cmr12!
- [31]
+[34] [35]
 Chapter 6.
-[32
+[36
 
-] [33] [34] [35] [36] [37] [38] [39]
-<images/metric.png, id=200, 647.41875pt x 383.4325pt>
+] [37] [38] [39] [40] [41] [42] [43]
+<images/metric.png, id=216, 647.41875pt x 383.4325pt>
 File: images/metric.png Graphic file (type png)
  <use images/metric.png>
-Package pdftex.def Info: images/metric.png used on input line 489.
+Package pdftex.def Info: images/metric.png used on input line 492.
 (pdftex.def)             Requested size: 312.9802pt x 199.16957pt.
 
-[40 <./images/metric.png>]
+[44 <./images/metric.png>]
 Chapter 7.
-[41
+[45
 
-] [42]
+] [46]
 Chapter 8.
-(./thesis.bbl [43
+(./thesis.bbl [47
 
 ]
 Underfull \hbox (badness 1221) in paragraph at lines 10--12
@@ -504,86 +523,86 @@ Underfull \hbox (badness 10000) in paragraph at lines 18--20
 []\OT1/cmr/m/n/12 Ten Rea-sons Open Sour-ceis Good for Busi-ness.
  []
 
-[44
+[48
 
-] [45]) [46] [47
+] [49]) [50] [51
 
 ]
 Appendix A.
 
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 529--540
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 532--543
 [][] 
  []
 
-[48
+[52
 
 
 ]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 547--558
-[][] 
- []
-
-[49]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 566--577
-[][] 
- []
-
-[50]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 586--597
-[][] 
- []
-
-[51]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 604--615
-[][] 
- []
-
-[52]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 622--633
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 550--561
 [][] 
  []
 
 [53]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 640--651
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 569--580
 [][] 
  []
 
 [54]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 662--674
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 589--600
 [][] 
  []
 
 [55]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 681--692
-[][] 
- []
-
-
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 699--710
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 607--618
 [][] 
  []
 
 [56]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 719--730
-[][] 
- []
-
-
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 737--748
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 625--636
 [][] 
  []
 
 [57]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 755--765
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 643--654
 [][] 
  []
 
 [58]
-Overfull \hbox (3.17235pt too wide) in paragraph at lines 772--784
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 665--677
 [][] 
  []
 
-[59] [60
+[59]
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 684--695
+[][] 
+ []
+
+
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 702--713
+[][] 
+ []
+
+[60]
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 722--733
+[][] 
+ []
+
+
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 740--751
+[][] 
+ []
+
+[61]
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 758--768
+[][] 
+ []
+
+[62]
+Overfull \hbox (3.17235pt too wide) in paragraph at lines 775--787
+[][] 
+ []
+
+[63] [64
 
 ] (./thesis.aux)
 
@@ -591,21 +610,21 @@ LaTeX Warning: There were multiply-defined labels.
 
  ) 
 Here is how much of TeX's memory you used:
- 3195 strings out of 494985
- 48794 string characters out of 6180356
- 112078 words of memory out of 5000000
- 6346 multiletter control sequences out of 15000+600000
+ 3224 strings out of 494985
+ 49396 string characters out of 6180356
+ 113475 words of memory out of 5000000
+ 6371 multiletter control sequences out of 15000+600000
  7434 words of font info for 27 fonts, out of 8000000 for 9000
  36 hyphenation exceptions out of 8191
- 38i,9n,38p,2286b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 37i,9n,38p,2286b,311s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></us
 r/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share
 /texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb>
-Output written on thesis.pdf (71 pages, 1652981 bytes).
+Output written on thesis.pdf (76 pages, 1818750 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 171 compressed objects within 2 object streams
+ 302 PDF objects out of 1000 (max. 8388607)
+ 183 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
  111 words of extra memory for PDF output out of 10000 (max. 10000000)
 

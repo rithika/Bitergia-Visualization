@@ -16,11 +16,12 @@
 \usepackage{float}
 \restylefloat{table}
 \usepackage[toc,page]{appendix}
+\usepackage{dirtytalk}
 
 
 \abstract{Open Source software gives users the freedom to copy, modify and redistribute source code without legal entanglements. The evolution of these software communities usually depend a lot on how the participating developers and users interact and co-operate with each other. Over the past few years, open source software have become widely accepted and used, hence making the study of their organization and sustainability a very hot topic. To understand the working philosophy, health, and evolution of any open source project, one needs to look at a variety of factors like community interaction, strength of connections, recruiting and mortality, support and contribution patterns. Getting, sharing and analyzing Software Development metrics and information related to open source projects has thus become important, with many projects and companies looking to do so. The main challenge however is distilling large amounts of data into actionable intelligence. The main idea behind this work is to help communities and others understand contribution patterns in open source projects through the use of various visualization techniques. }
 
-\acknowledgements{I would like to take this opportunity to thank my advisor, Dr Carlos Jensen, for his patience and constant support throughout the phase of this research. All the brainstorming sessions to discuss every minute detail in progress were extremely fruitful. My sincere gratitude to Dr Anita Sarma, Dr Cindy Grimm, Dr Cathy Mullet for accepting my invitation and taking time to be a part of my Graduate committee. 
+\acknowledgements{I would like to take this opportunity to thank my advisor, Dr Carlos Jensen, for his patience and constant support throughout the phase of this research. All the brainstorming sessions to discuss every minute detail in progress were extremely fruitful. My sincere gratitude to Dr Anita Sarma, Dr Cindy Grimm, Dr Kathy Mullet for accepting my invitation and taking time to be a part of my Graduate committee. 
 
 My gratitude to team Bitergia as this work would not have been possible if not for their quest to learn more. So thank you Jesus M  Gonzalez Barahona and Gregorio Robles for providing me with the necessary datasets and valuable suggestions.
 
@@ -38,7 +39,7 @@ My dream of pursuing a Master's degree would not have been fulfilled if not for 
 \chapter{Introduction}
 The software industry has undergone a lot of changes over the years and one such important change was the advent of Open Source Software(OSS). Open source software is a type of software development which is volunteer driven\cite{ghosh2005} and the code base is usually made available for any person to modify, edit and redistribute\cite{osdef}. Open source software is being heavily relied on and used today because of-
 \begin{enumerate}
-\item Quality: Would you prefer a software written by a bunch of developers or software written and improvised by thousands of developers? It follows the principle of "Given enough eyeballs, all bugs are shallow"\cite{linuslaw}, where it is found that in open source software, as a large base of developers contribute to the code base, this would only lead to a large variety of features, huge support groups and enhanced products\cite{pcwr}. 
+\item Quality: Would you prefer a software written by a bunch of developers or software written and improvised by thousands of developers? It follows the principle of \say{Given enough eyeballs, all bugs are shallow}\cite{linuslaw}, where it is found that in open source software, as a large base of developers contribute to the code base, this would only lead to a large variety of features, huge support groups and enhanced products\cite{pcwr}. 
 \item Flexibility: Giving the users ability to tweak any part of the functionality to match their needs, because the code is open and available\cite{pcwr}. 
 \item Auditability: One can believe the claims made by the authors about issues like security, freedom, flexibility etc which is highly lacking in closed source software\cite{pcwr}. 
 \item Large support base: Available in the form of documentation, forums, mailing lists, forges, wiki, live chats and so on and with so many options available a user can never hold onto to a problem long enough. 
@@ -90,7 +91,7 @@ As providing software metrics was the goal here, they started off by building to
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=90mm]{bitergia.jpg}
+\includegraphics[width=140mm]{bitergia.jpg}
 \caption{Bitergia data forums}
 \end{figure}
 
@@ -118,13 +119,13 @@ A lot has been discussed about the motivation for developers to join or stay or 
 \begin{figure}[!ht]
 \centering
 \includegraphics[width=90mm]{age2.png}
-\caption{3D version of pyramids every two years}
+\caption{3D version of pyramids every two years. The height of each bar depicts the number of developers that stayed for 'x' number of years and each color depicts the data for a particular year.}
 \end{figure}
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=90mm]{age1.png}
-\caption{Comparison for pyramids every two years}
+\includegraphics[width=130mm]{age1.png}
+\caption{Comparison for pyramids every two years. The colors here point to data from the corresponding years and the height of the bar is the measure of the number of developers in each quarter.}
 \end{figure}
 
 The problem here was that, the 3D visualization, though colorful, was a little hard to relate to, that is to understand the dynamics. Also the bar charts were an absolute mark of the developer numbers at any given time but they were not enough to know the group of developers that were actually staying and the ones that were leaving. The initial thought here was, turnover and age were not well depicted in these visuals.
@@ -178,11 +179,11 @@ This is an OSS which deploys and manages networks of virtual machines as a IaaS(
 The choice of projects was done mainly keeping in mind that cover a variety of projects. In the selected 5 projects,Eclipse Foundation and RedHat have been around and successful for a long time garnering attention from time to time. These projects also have a large developer community and can hence be classified as a large scale project. OpenStack Foundation,Puppet Labs and Apache Cloudstack are relatively newer projects gaining popularity slowly amomg the community. OpenStack has made its presence felt strongly as cloud based software is now gathering a lot of buzz. Citrix's Apache Cloudstack was set up as a result of the gaining popularity of OpenStack, to help people using it on Linux. This gives us a set of medium to small sized projects with growing communities.
 
 \section{Dataset}
-As Bitergia already had a large database for a few open source projects, they were very co-operative and gave us full access to all the data that they had in hand for the 5 organizations that have been looked into. The files were all in the json format and this was an ideal format for us to work with. There was some manipulation of data involved for a few visualizations. The first step was to identify the format of the data and then brainstorm for ideal visualizations depending on the possible ways to understand the data. All the data collected was till February, 2015 and holds data from 2010 to 2015. The timezone files have data from timezone -12 to +11.One important field added to the timezone files, was the approximate population for each of the timezones which was taken from the below graph.
+As Bitergia already had a large database for a few open source projects, they were very co-operative and gave us full access to all the data that they had in hand for the 5 organizations that have been looked into. The files were all in the json format and this was an ideal format for us to work with. There was some manipulation of data involved for a few visualizations. The first step was to identify the format of the data and then brainstorm for ideal visualizations depending on the possible ways to understand the data. All the data collected was till February, 2015 and holds data from 2010 to 2015. The timezone files have data from timezone -12 to +11. One important field added to the timezone files, was the approximate population for each of the timezones which was taken from the below graph.
 
 \begin{figure}[!ht]
 \centering
-\includegraphics[width=90mm]{pop1.jpg}
+\includegraphics[width=160mm, height=100mm]{pop1.png}
 \caption{Global population by timezone}
 \end{figure}
 
@@ -200,7 +201,7 @@ The implemetations done by team Bitergia are viewed to analyse the data set in h
 
 \begin{figure}[H]
 \begin{center}
-\includegraphics[width=60mm]{image11.PNG}
+\includegraphics[width=90mm]{image11.PNG}
 \end{center}
 \caption{Experience of Developers}
 \label{fig:devExp}
@@ -217,11 +218,11 @@ Figure \ref{fig:devWork} is used to view the number of messages incoming from di
 \end{figure}
 
 \subsection{Our Implementations}
-Figure \ref{fig:devTurn} is a grouped bar chart which has two main data sets - one column shows the number of developers who join the project each year i.e New developers and the second column shows the number of developers that are still a part of the project each year i.e Established developers.
+Figure \ref{fig:devTurn} is a grouped bar chart which has two main data sets - one column shows the number of developers who join the project each year i.e., New developers and the second column shows the number of developers that are still a part of the project each year i.e., Established developers.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image1.PNG}
+\includegraphics[width=130mm,height=60mm]{image1.PNG}
 \caption{Developer Turnover}
 \label{fig:devTurn}
 \end{figure}
@@ -230,32 +231,32 @@ Figure \ref{fig:actAuth} is a stacked bar chart which gives an individual a tota
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image2.PNG}
+\includegraphics[width=170mm,height=70mm]{image2.PNG}
 \caption{Active Authors Across the Years}
 \label{fig:actAuth}
 \end{figure}
 
-Figure \ref{fig:devMort} is a also a stacked chart which shows the conversion rate i.e percentage of developers that stay back in a project each year and the mortality rate i.e percentage of developers that leave the project each year.
+Figure \ref{fig:devMort} is a also a stacked chart which shows the conversion rate i.e., percentage of developers that stay back in a project each year and the mortality rate i.e., percentage of developers that leave the project each year.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image3.PNG}
+\includegraphics[width=130mm,height=60mm]{image3.PNG}
 \caption{Developer Mortality by Joining Date}
 \label{fig:devMort}
 \end{figure}
 
-From Figure \ref{fig:auHub} to Figure \ref{fig:div3} are all map based visualizations which use color as a main encoding mechanism to show one parameter from the dataset. Figure \ref{fig:auHub} is shaded as per number of Authors present in each timezone and the data picked from github. Similarly Figure \ref{fig:auML} is shaded with the same parameter but the data is taken from the mailing lists.
+From Figure \ref{fig:auHub} to Figure \ref{fig:div3} are all map based visualizations which use color as a main encoding mechanism to show one parameter from the dataset. Figure \ref{fig:auHub} is shaded as per number of Authors present in each timezone and the data picked from github. Similarly Figure \ref{fig:auML} is shaded with the same parameter but the data is taken from the mailing lists. In each of the figures below, the orange shaded countries signify that there was no data to available for that particular timezone and this happended with countries which had half timezones like India, central Australia, Iran, Myanmar, Nepal and a small part of Canada. Also data for countries lying in timezone +12 like Russia and New Zealand was not available as well. Hence all of these countries were shaded orange to show this.
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image4.PNG}
+\includegraphics[width=130mm,height=60mm]{image4.PNG}
 \caption{Authors per timezone - Github}
 \label{fig:auHub}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image5.PNG}
+\includegraphics[width=130mm,height=60mm]{image5.PNG}
 \caption{Authors per timezone - Mailing lists}
 \label{fig:auML}
 \end{figure}
@@ -264,14 +265,14 @@ Figure \ref{fig:coHub} and Figure \ref{fig:mgML} are shaded as per commits per t
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image6.PNG}
+\includegraphics[width=130mm,height=60mm]{image6.PNG}
 \caption{Commits per timezone - Github}
 \label{fig:coHub}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image7.PNG}
+\includegraphics[width=130mm,height=60mm]{image7.PNG}
 \caption{Messages per timezone - Mailing lists}
 \label{fig:mgML}
 \end{figure}
@@ -280,21 +281,21 @@ Figures \ref{fig:div1}, \ref{fig:div2} and \ref{fig:div3} are maps which are sha
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image8.PNG}
+\includegraphics[width=130mm,height=60mm]{image8.PNG}
 \caption{Contributions/Author per timezone - Github}
 \label{fig:div1}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image9.PNG}
+\includegraphics[width=130mm,height=60mm]{image9.PNG}
 \caption{Messages/Author per timezone - Mailing lists}
 \label{fig:div2}
 \end{figure}
 
 \begin{figure}[H]
 \centering
-\includegraphics[width=110mm,height=50mm]{image10.PNG}
+\includegraphics[width=130mm,height=60mm]{image10.PNG}
 \caption{Commits/Population per timezone - Github}
 \label{fig:div3}
 \end{figure}
@@ -336,6 +337,8 @@ The evaluation of visualizations has always been subject to a lot of research. T
 
 \item Number of data points and data density: This metric was defined by Tufte when he assumed that the more the amount of data made available per square centimeter of screen size, the more effective is the visualization. The number of data points here mean the discrete number of data sets/values present on the screen at any point and data density is the number of points/pixels on the screen excluding the borders and menu options. It is said that visualizations which cannot show atleast 500 data points, are not found to effective\cite{brath1997}. But this is not a fixed lower bound and can vary depending on the use of the visualization. The same goes for the upper bound, there could be visualizations which have around 100,000 data points and be considered effective and there could be visualizations with just 3000 data points and still be deemed as complex\cite{brath1997}.
 \end{enumerate}
+
+Though these two metrics were mathematical in nature, Nico stated that as they miss the human element of understanding, one can modify to use these metrics to certify how much the users understand the concepts and can be deemed as user centric metrics in a way as they now consider more of the whole visualization than just the quantitative aspect\cite{nico2007}. Hence we used this aspect in our coding sessions to maintain consistency.
 
 \subsection{User Centric Metrics}
 
@@ -415,12 +418,12 @@ This question needed knowledge of both countries in a timezone and their populat
 \begin{enumerate}
 \item \textbf{Were you able to answer all the questions in both scenarios with the help of the visualizations?}
 
-All the participants found scenario B to be a little low on information. They found scenarioA to be easier to grasp and make sense of in most cases. They found the case1 i.e age of developers relatively easy to interpret in both scenarios but the case2 i.e where do developers work part was difficult in scenarioB as they weren't sure what to make of the number -10,-5,0,5,10 in the x axis. Most participants agreed to have guessed a lot of the asnwers for the scenarioB questions as they had a tough time analysing and tying back the questions to the visualizations.
+All the participants found scenario B to be a little low on information. They found scenarioA to be easier to grasp and make sense of in most cases. They found the case1 i.e., age of developers relatively easy to interpret in both scenarios but the case2 i.e., where do developers work part was difficult in scenarioB as they weren't sure what to make of the number -10,-5,0,5,10 in the x axis. Most participants agreed to have guessed a lot of the asnwers for the scenarioB questions as they had a tough time analysing and tying back the questions to the visualizations.
 As part of the coding, both reserachers found that the participants felt a high reference of context with regard to the visualizations in scenarioA with 5 of them making almost direct comments with this regard.
 
 \textbf{Reference to Context}
 
-{\em "ScenarioA was much better atleast to interpret.I was able to find all that I needed from it."}- A5
+{\em \say{ScenarioA was much better atleast to interpret.I was able to find all that I needed from it.}}- A5
 
 \item \textbf{Were the visualizations confusing to understand or seem impractical at any point?}
 
@@ -428,9 +431,9 @@ The participants had one major issue here, they found the axis on both visualiza
 
 \textbf{See all the features and data}
 
-{\em "Ah! Confusion no. I felt like the scenarioA, the visualization was a lot more intuitive, the use of colors also helped a lot."} - A4
+{\em \say{Ah! Confusion no. I felt like the scenarioA, the visualization was a lot more intuitive, the use of colors also helped a lot.}} - A4
 
-{\em "I felt like scenarioA was a lot more interactive like you could see little labels popup or something like that so I feel like that gives you a lot more information than just the visualization itself."} - A2
+{\em \say{I felt like scenarioA was a lot more interactive like you could see little labels popup or something like that so I feel like that gives you a lot more information than just the visualization itself.}} - A2
 
 \item \textbf{How effectively did the visualizations handle missing datasets? Were you able to find the missing/dirty data points easily?}
 
@@ -438,7 +441,7 @@ The one thing which came out unanimously was the fact that the orange and dot pa
 
 \textbf{Dealing with uncertain, missing or dirty data}
 
-{\em "While scenarioA, its very clearly said as you have that orange color with dots saying its missing and thats a good way of saying we don't have data there."} - A2
+{\em \say{While scenarioA, its very clearly said as you have that orange color with dots saying its missing and thats a good way of saying we don't have data there.}} - A2
 
 \item \textbf{Can we predict future structure of open source projects using the visualizations in either scenario?}
 
@@ -450,7 +453,7 @@ They felt a useful visualization should be able to handle the data very efficien
 
 \textbf{Data Density}
 
-{\em "It is always important to think about user space whenever displayin visualizations, how does it fit together, how all the data shows up and fits together in that space, how the colors interact with each other and I think the scenarioA did a lot better there and did a very good job."} - A3
+{\em \say{It is always important to think about user space whenever displayin visualizations, how does it fit together, how all the data shows up and fits together in that space, how the colors interact with each other and I think the scenarioA did a lot better there and did a very good job.}} - A3
 
 \item \textbf{Would adding more data points clutter the visualizations or add to its flexibility?}
 
@@ -458,12 +461,12 @@ Most participants felt that the map visualizations had a lot of potential to sho
 
 \textbf{Flexibility of visualizations}
 
-{\em "You can use colors for commit frequency and other metric you can show with thickness like internet bandwidth in countries, so nothing overlaps, the map visualizations can handle this well."} - A1
+{\em \say{You can use colors for commit frequency and other metric you can show with thickness like internet bandwidth in countries, so nothing overlaps, the map visualizations can handle this well.}} - A1
 \end{enumerate}
 \section{Metric Frequency for each Scenario}
 
 
-The table \ref{tab:freq} gives an insight on how both the visualizations stood when it came to evaluating them with the the metrics. ScenarioA was highly appreciated for its ease of use, contextual nature and flexibility, while scenarioB had one major issue of being too stagnant and low on information. The visualizations gave little but were not deemed to be completely useless. The participants were of the opinion that if the scenarioB visualizations would be combined with scenarioA visualizations then they might probably add some value to a resarcher's quest.
+The table \ref{tab:freq} gives an insight on how both the visualizations stood when it came to evaluating them with the the metrics. ScenarioA was highly appreciated for its ease of use, contextual nature and flexibility, while scenarioB had one major issue of being too stagnant and low on information. The visualizations gave little but were not deemed to be ineffectual. The participants were of the opinion that if the scenarioB visualizations would be combined with scenarioA visualizations then they might probably add some value to a resarcher's quest.
 
 \begin{table}[H]
 \centering
@@ -511,7 +514,7 @@ Metric & ScenarioA & ScenarioB\\
 
 
 \chapter{Summary}
-A large number of developers contribute to open source projects from all over the world and it becomes important to understand their working behaviour to gauge their interest in the project and the growth of the project.Visualizations add a lot of drama to a dataset making it reflect things that the naked eye can't always see. In our case the aim was to make visualizations which would help understand the way developers work/contribute to an open source project to infer the future scope of these projects. As stated by one of the user study participants, "It all depends on what the message is and how it can be conveyed effectively". Both visualizations had their own shares of advantages and disadvantages, but scenarioA stood out plainly because it gave out the message clearly and in multiple ways. ScenarioB was not thrown out by our participants, they felt it had potential too, if modified and looked at, along with the visualizations in ScenarioA. Having said this there is room for improvement in the implementations as well as a wide variety of suggestions were attained from the participants and also due to the small size of the group there is scope for conducting further studies to get more feedback. 
+A large number of developers contribute to open source projects from all over the world and it becomes important to understand their working behaviour to gauge their interest in the project and the growth of the project.Visualizations add a lot of drama to a dataset making it reflect things that the naked eye can't always see. In our case the aim was to make visualizations which would help understand the way developers work/contribute to an open source project to infer the future scope of these projects. As stated by one of the user study participants, \say{It all depends on what the message is and how it can be conveyed effectively.} Both visualizations had their own shares of advantages and disadvantages, but scenarioA stood out plainly because it gave out the message clearly and in multiple ways. ScenarioB was not thrown out by our participants, they felt it had potential too, if modified and looked at, along with the visualizations in ScenarioA. Having said this there is room for improvement in the implementations as well as a wide variety of suggestions were attained from the participants and also due to the small size of the group there is scope for conducting further studies to get more feedback. 
 
 \bibliographystyle{unsrt}
 \bibliography{thesis}
