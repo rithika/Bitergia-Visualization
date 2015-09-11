@@ -114,6 +114,11 @@ Von Engelhardt S, Freytag A, Schulz C.
 \newblock On the Geographic Allocation of Open Source Software Activities.
 \newblock In {\em Jena Economic Research Papers}, 2010.
 
+\bibitem{james2011}
+James Chiang
+\newblock Understanding what makes 3D Visualizations Difficult
+\newblock In {\em Rutgers Archive}, 2011.
+
 \bibitem{tuomi2004}
 Tuomi I.
 \newblock Evolution of Linux credits file: Methodological challenges and reference data for open source research,
@@ -170,6 +175,10 @@ Procedures  for  Developing  Grounded  Theory,
 \bibitem{bit}
 \newblock Bitergia.
 \newblock https://www.bitergia.com/
+
+\bibitem{d3}
+\newblock D3.js.
+\newblock http://d3js.org/
 
 \bibitem{eclipse}
 \newblock Eclipse Foundation.

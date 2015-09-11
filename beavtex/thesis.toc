@@ -2,36 +2,36 @@
 \contentsline {section}{\numberline {1.1}Why Data Visualizations?}{4}
 \contentsline {chapter}{\numberline {2}Related Work}{5}
 \contentsline {section}{\numberline {2.1}Experience of Developers}{7}
-\contentsline {section}{\numberline {2.2}Geography of Developers}{8}
+\contentsline {section}{\numberline {2.2}Geographic Diversity of Developers}{8}
 \contentsline {chapter}{\numberline {3}Data Gathering and Processing}{10}
 \contentsline {section}{\numberline {3.1}Services provided}{10}
 \contentsline {section}{\numberline {3.2}Task at hand}{12}
-\contentsline {chapter}{\numberline {4}Methodology}{17}
-\contentsline {section}{\numberline {4.1}The Organizations}{17}
-\contentsline {section}{\numberline {4.2}Why the 5 projects?}{18}
-\contentsline {section}{\numberline {4.3}Dataset}{19}
-\contentsline {section}{\numberline {4.4}D3.js}{20}
-\contentsline {section}{\numberline {4.5}Experimental Designs}{21}
-\contentsline {subsection}{\numberline {4.5.1}Bitergia's Implementations}{21}
-\contentsline {subsection}{\numberline {4.5.2}Our Implementations}{23}
-\contentsline {chapter}{\numberline {5}Evaluation}{30}
-\contentsline {section}{\numberline {5.1}Participants}{30}
-\contentsline {section}{\numberline {5.2}Study Session}{31}
-\contentsline {section}{\numberline {5.3}Evaluation Metrics}{32}
-\contentsline {subsection}{\numberline {5.3.1}Mathematical Metrics}{33}
-\contentsline {subsection}{\numberline {5.3.2}User Centric Metrics}{34}
-\contentsline {subsection}{\numberline {5.3.3}Effectiveness Metrics}{34}
-\contentsline {section}{\numberline {5.4}Code Application}{35}
-\contentsline {chapter}{\numberline {6}Results}{36}
-\contentsline {section}{\numberline {6.1}Task Performance}{36}
-\contentsline {subsection}{\numberline {6.1.1}Case 1 response summary}{37}
-\contentsline {subsection}{\numberline {6.1.2}Case 2 response summary}{38}
-\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{39}
-\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{43}
-\contentsline {chapter}{\numberline {7}Threats to Validity}{45}
-\contentsline {section}{\numberline {7.1}Internal Threats}{45}
-\contentsline {section}{\numberline {7.2}External Threats}{45}
-\contentsline {section}{\numberline {7.3}Reliability Threats}{45}
-\contentsline {chapter}{\numberline {8}Summary}{47}
-\contentsline {chapter}{Bibliography}{47}
-\contentsline {chapter}{\numberline {A}Task Responses}{52}
+\contentsline {chapter}{\numberline {4}Methodology}{16}
+\contentsline {section}{\numberline {4.1}The Organizations}{16}
+\contentsline {section}{\numberline {4.2}Why the 5 projects?}{17}
+\contentsline {section}{\numberline {4.3}Dataset}{17}
+\contentsline {section}{\numberline {4.4}D3.js}{19}
+\contentsline {section}{\numberline {4.5}Experimental Designs}{19}
+\contentsline {subsection}{\numberline {4.5.1}Bitergia's Implementations}{19}
+\contentsline {subsection}{\numberline {4.5.2}Our Implementations}{21}
+\contentsline {chapter}{\numberline {5}Evaluation}{28}
+\contentsline {section}{\numberline {5.1}Participants}{28}
+\contentsline {section}{\numberline {5.2}Study Session}{29}
+\contentsline {section}{\numberline {5.3}Evaluation Metrics}{30}
+\contentsline {subsection}{\numberline {5.3.1}Mathematical Metrics}{30}
+\contentsline {subsection}{\numberline {5.3.2}User Centric Metrics}{31}
+\contentsline {subsection}{\numberline {5.3.3}Effectiveness Metrics}{32}
+\contentsline {section}{\numberline {5.4}Code Application}{32}
+\contentsline {chapter}{\numberline {6}Results}{33}
+\contentsline {section}{\numberline {6.1}Task Performance}{33}
+\contentsline {subsection}{\numberline {6.1.1}Case 1 response summary}{34}
+\contentsline {subsection}{\numberline {6.1.2}Case 2 response summary}{35}
+\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{36}
+\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{40}
+\contentsline {chapter}{\numberline {7}Threats to Validity}{42}
+\contentsline {section}{\numberline {7.1}Internal Threats}{42}
+\contentsline {section}{\numberline {7.2}External Threats}{42}
+\contentsline {section}{\numberline {7.3}Reliability Threats}{42}
+\contentsline {chapter}{\numberline {8}Summary}{44}
+\contentsline {chapter}{Bibliography}{44}
+\contentsline {chapter}{\numberline {A}Task Responses}{49}
