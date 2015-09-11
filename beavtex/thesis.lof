@@ -7,22 +7,22 @@
 \contentsline {figure}{\numberline {3.3}{\ignorespaces Eclipse Dashboard\relax }}{12}
 \contentsline {figure}{\numberline {3.4}{\ignorespaces 3D version of pyramids every two years. The height of each bar depicts the number of developers that stayed for 'x' number of years and each color depicts the data for a particular year.\relax }}{13}
 \contentsline {figure}{\numberline {3.5}{\ignorespaces Comparison for pyramids every two years. The colors here point to data from the corresponding years and the height of the bar is the measure of the number of developers in each quarter.\relax }}{14}
-\contentsline {figure}{\numberline {3.6}{\ignorespaces Timezone origin of messages\relax }}{15}
-\contentsline {figure}{\numberline {3.7}{\ignorespaces Timezone origin of messages for 2002,2007,2012\relax }}{16}
+\contentsline {figure}{\numberline {3.6}{\ignorespaces Time zone origin of messages\relax }}{15}
+\contentsline {figure}{\numberline {3.7}{\ignorespaces Time zone origin of messages for 2002,2007,2012\relax }}{16}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Global population by timezone\relax }}{20}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Global population by time zone\relax }}{20}
 \contentsline {figure}{\numberline {4.2}{\ignorespaces Experience of Developers\relax }}{22}
 \contentsline {figure}{\numberline {4.3}{\ignorespaces Where do Developers Work?\relax }}{23}
 \contentsline {figure}{\numberline {4.4}{\ignorespaces Developer Turnover\relax }}{24}
 \contentsline {figure}{\numberline {4.5}{\ignorespaces Active Authors Across the Years\relax }}{24}
 \contentsline {figure}{\numberline {4.6}{\ignorespaces Developer Mortality by Joining Date\relax }}{25}
-\contentsline {figure}{\numberline {4.7}{\ignorespaces Authors per timezone - Github\relax }}{26}
-\contentsline {figure}{\numberline {4.8}{\ignorespaces Authors per timezone - Mailing lists\relax }}{26}
-\contentsline {figure}{\numberline {4.9}{\ignorespaces Commits per timezone - Github\relax }}{27}
-\contentsline {figure}{\numberline {4.10}{\ignorespaces Messages per timezone - Mailing lists\relax }}{27}
-\contentsline {figure}{\numberline {4.11}{\ignorespaces Contributions/Author per timezone - Github\relax }}{28}
-\contentsline {figure}{\numberline {4.12}{\ignorespaces Messages/Author per timezone - Mailing lists\relax }}{28}
-\contentsline {figure}{\numberline {4.13}{\ignorespaces Commits/Population per timezone - Github\relax }}{29}
+\contentsline {figure}{\numberline {4.7}{\ignorespaces Authors per time zone - Github\relax }}{26}
+\contentsline {figure}{\numberline {4.8}{\ignorespaces Authors per time zone - Mailing lists\relax }}{26}
+\contentsline {figure}{\numberline {4.9}{\ignorespaces Commits per time zone - Github\relax }}{27}
+\contentsline {figure}{\numberline {4.10}{\ignorespaces Messages per time zone - Mailing lists\relax }}{27}
+\contentsline {figure}{\numberline {4.11}{\ignorespaces Contributions/Author per time zone - Github\relax }}{28}
+\contentsline {figure}{\numberline {4.12}{\ignorespaces Messages/Author per time zone - Mailing lists\relax }}{28}
+\contentsline {figure}{\numberline {4.13}{\ignorespaces Commits/Population per time zone - Github\relax }}{29}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \contentsline {figure}{\numberline {6.1}{\ignorespaces Metric Evaluation\relax }}{44}
