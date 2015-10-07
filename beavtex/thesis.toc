@@ -22,16 +22,16 @@
 \contentsline {subsection}{\numberline {5.3.2}User Centric Metrics}{32}
 \contentsline {subsection}{\numberline {5.3.3}Effectiveness Metrics}{32}
 \contentsline {section}{\numberline {5.4}Code Application}{32}
-\contentsline {chapter}{\numberline {6}Results}{34}
-\contentsline {section}{\numberline {6.1}Task Performance}{34}
-\contentsline {subsection}{\numberline {6.1.1}Case 1 response summary}{35}
-\contentsline {subsection}{\numberline {6.1.2}Case 2 response summary}{36}
-\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{37}
-\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{41}
-\contentsline {chapter}{\numberline {7}Threats to Validity}{43}
-\contentsline {section}{\numberline {7.1}Internal Threats}{43}
-\contentsline {section}{\numberline {7.2}External Threats}{43}
-\contentsline {section}{\numberline {7.3}Reliability Threats}{43}
-\contentsline {chapter}{\numberline {8}Summary}{45}
-\contentsline {chapter}{Bibliography}{45}
-\contentsline {chapter}{\numberline {A}Task Responses}{50}
+\contentsline {chapter}{\numberline {6}Results}{33}
+\contentsline {section}{\numberline {6.1}Task Performance}{33}
+\contentsline {subsection}{\numberline {6.1.1}Case 1 response summary}{34}
+\contentsline {subsection}{\numberline {6.1.2}Case 2 response summary}{35}
+\contentsline {section}{\numberline {6.2}Focus Group Data Analysis}{36}
+\contentsline {section}{\numberline {6.3}Metric Frequency for each Scenario}{40}
+\contentsline {chapter}{\numberline {7}Threats to Validity}{42}
+\contentsline {section}{\numberline {7.1}Internal Threats}{42}
+\contentsline {section}{\numberline {7.2}External Threats}{42}
+\contentsline {section}{\numberline {7.3}Reliability Threats}{42}
+\contentsline {chapter}{\numberline {8}Summary}{44}
+\contentsline {chapter}{Bibliography}{44}
+\contentsline {chapter}{\numberline {A}Task Responses}{49}
